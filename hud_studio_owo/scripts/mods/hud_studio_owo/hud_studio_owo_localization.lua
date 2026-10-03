@@ -1,11 +1,11 @@
-local mod = get_mod("hud_studio_min_bar_owo")
+local mod = get_mod("hud_studio_owo")
 
 return {
 	mod_name = {
-		en = "hud_studio_min_bar_owo",
+		en = "HUD Studio - Opposition within Oligarchy",
 	},
 	mod_description = {
-		en = "",
+		en = "HUD Studio preset for minimalist HUD blocks using bars.",
 	},
 	enable_debug_mode = {
 		en = "Enable Debug Mode",

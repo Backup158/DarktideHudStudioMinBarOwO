@@ -1,4 +1,4 @@
-local mod = get_mod("hud_studio_min_bar_owo")
+local mod = get_mod("hud_studio_owo")
 
 return {
 	name = mod:localize("mod_name"),
