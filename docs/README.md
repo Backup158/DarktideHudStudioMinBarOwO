@@ -5,6 +5,8 @@ Add-on for [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263
 # Description
 Library of HUD Studio blocks with basic information hidden until needed (or demanded). Typically bars with numbers and color-coded icons.
 
+Just installing this won't change anything; this is just a resource for you to use with HUD Studio.
+
 ![player hud with most](./assets/images/owo_hud_show_all.png)
 
 ## Blocks
