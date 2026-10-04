@@ -1,4 +1,4 @@
-![Thumbnail]()
+![you don't want to know](./assets/images/hud_studio_owo_thumbnail.png)
 
 Add-on for [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263).
 
@@ -102,3 +102,5 @@ I assume you know how to install mods. If not, here's the [guide for manual inst
 5. Import blocks from this mod's library
 
 Move and edit them to your heart's desire!
+
+![you don't want to know](./assets/images/hud_studio_owo_banner.png)
