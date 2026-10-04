@@ -5,6 +5,8 @@ Add-on for [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263
 # Description
 Library of HUD Studio blocks with basic information hidden until needed (or demanded). Typically bars with numbers and color-coded icons.
 
+![player hud with most](./assets/images/owo_hud_show_all.png)
+
 ## Blocks
 By default, all blocks will also appear on demand when you hold the hotkey `T`.
 
@@ -23,6 +25,8 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
     - Bar that fades in with intensity
     - It goes from faded out pink to hot pink
 
+![player panel ammo psyker](./assets/images/owo_hud_ammo_psyker.png)
+
 ### Ammo
 These appear on hotkey and inspecting the relevant weapon. All of these show value by color-coding.
 - Magazine icons
@@ -38,6 +42,12 @@ These appear on hotkey and inspecting the relevant weapon. All of these show val
 
 There are disabled options to show the raw numbers.
 
+![player panel ammo inspect](./assets/images/owo_hud_ammo_inspect.png)
+
+![player panel ammo reload](./assets/images/owo_hud_ammo_reload.png)
+
+![player panel ammo special](./assets/images/owo_hud_ammo_special.png)
+
 ### Blitz Box (Below Max)
 - Blitz Icon
     - Only on demand. I know what blitz I have equipped.
@@ -51,6 +61,10 @@ There are disabled options to show the raw numbers.
         - Disable this if it's annoying. I'm leaving this here for when there's a workaround found.
 
 ### Near Crosshair
+Low opacity numbers for a quick glance while fighting.
+- Dodge count / max
+    - Only appears when at 1 charge or less
+    - Turns red as you go more negative
 
 # Installation
 I assume you know how to install mods. If not, here's the [guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
