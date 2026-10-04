@@ -30,15 +30,15 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
 
 ### Ammo
 These appear on hotkey and inspecting the relevant weapon. All of these show value by color-coding.
+- Special Ammo
+    - Same as above
+    - Also appears when holding the load special ammo button while the ranged weapon is out
 - Magazine icons
     - Changes color at 50% capacity and 100%
     - Also appears when holding reload while the ranged weapon is out
 - Total ammo icons
     - Same as above
     - When at >= 85% ammo, the icon turns green to represent not needing to pick up a small ammo (does not change based on Havoc so you'll have to figure that one out yourself)
-- Special Ammo
-    - Same as above
-    - Also appears when holding the load special ammo button while the ranged weapon is out
 - Melee Special
     - No additional conditions
 
