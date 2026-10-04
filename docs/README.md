@@ -26,7 +26,7 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
     - It goes from faded out pink to hot pink
     - Not in the pictures because it's fully transparent at 0%, but it's below the stamina bar
 
-![player panel ammo psyker](./assets/images/owo_hud_ammo_psyker.png)
+![player panel ammo psyker](./assets/images/owo_hud_player_ammo_psyker.png)
 
 ### Ammo
 These appear on hotkey and inspecting the relevant weapon. All of these show value by color-coding.
