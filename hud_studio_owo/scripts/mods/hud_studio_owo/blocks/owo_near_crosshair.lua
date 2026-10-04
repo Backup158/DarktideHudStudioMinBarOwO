@@ -30,7 +30,7 @@ return {
 	export_mod = "hud_studio_owo",
 	grid_cols = 0,
 	grid_rows = 0,
-	label = "Near Crosshair",
+	label = "OwO Near Crosshair",
 	localizations = {},
 	name = "owo_near_crosshair",
 	nodes = {
@@ -87,6 +87,7 @@ return {
 			values = {
 				current = 60,
 				max = 100,
+				opacity = 0.69999999999999996,
 			},
 		},
 		{
@@ -223,6 +224,7 @@ return {
 				mode = "fixed",
 				mode2 = "fixed",
 				mode3 = "fixed",
+				opacity = 0.69999999999999996,
 				text = "Text",
 				text2 = " / ",
 				value_mode = "chain",
@@ -475,7 +477,7 @@ return {
 	},
 	opacity = {
 		kind = "fixed",
-		value = 0.25,
+		value = 0.5,
 	},
 	scale_anchor = "origin",
 	summary = "Small numerical displays at low opacity: dodges, peril, and heat (dodge refresh hidden by default).",

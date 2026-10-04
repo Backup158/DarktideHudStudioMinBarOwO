@@ -153,7 +153,7 @@ return {
 	export_mod = "hud_studio_owo",
 	grid_cols = 0,
 	grid_rows = 0,
-	label = "Player only Panel",
+	label = "OwO Player only Panel",
 	localizations = {},
 	name = "owo_player_only_panel",
 	nodes = {

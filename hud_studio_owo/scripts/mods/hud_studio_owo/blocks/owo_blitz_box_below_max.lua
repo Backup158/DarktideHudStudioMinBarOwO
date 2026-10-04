@@ -276,7 +276,7 @@ return {
 			id = "progress_to_next_charge_bar",
 			label = "Progress to next charge bar",
 			offset = {
-				155,
+				158,
 				828,
 			},
 			style = {
@@ -291,6 +291,7 @@ return {
 					15,
 					46,
 				},
+				visible = false,
 			},
 			type = "progress_bar",
 			values = {
@@ -328,11 +329,63 @@ return {
 									op = "true",
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "blitz.count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "==",
+									rhs = {
+										field = "blitz.max_count",
+										kind = "fixed",
+										source = "player_1",
+										value = 1,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "t.held",
 										kind = "source",
 										source = "keys",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.uses_charges",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "true",
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "inspect.held",
+										kind = "source",
+										source = "actions",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.is_equipped",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.uses_charges",
+										kind = "source",
+										source = "player_1",
+										value = "charges",
 									},
 									op = "true",
 								},
@@ -342,8 +395,8 @@ return {
 					},
 				},
 			},
-			id = "max_when_holding",
-			label = "Max when holding",
+			id = "max_last_in_hand",
+			label = "Max (Last in hand)",
 			offset = {
 				132,
 				850,
@@ -397,11 +450,63 @@ return {
 									op = "true",
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "blitz.count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "==",
+									rhs = {
+										field = "blitz.max_count",
+										kind = "fixed",
+										source = "player_1",
+										value = 1,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "t.held",
 										kind = "source",
 										source = "keys",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.uses_charges",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "true",
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "inspect.held",
+										kind = "source",
+										source = "actions",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.is_equipped",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.uses_charges",
+										kind = "source",
+										source = "player_1",
+										value = "charges",
 									},
 									op = "true",
 								},
@@ -413,8 +518,8 @@ return {
 					},
 				},
 			},
-			id = "charges_when_holding",
-			label = "Charges when holding",
+			id = "charges_last_in_hand",
+			label = "Charges (Last in hand)",
 			offset = {
 				132,
 				827,
@@ -443,7 +548,7 @@ return {
 	},
 	scale_anchor = "center",
 	screen_anchor = "bottom",
-	summary = "Show blitz count when in hand and below max. Show all on hotkey. Progress does not include talents because go die.",
+	summary = "Show blitz count when last is in hand. Show all on hotkey and inspect. Progress does not include talents because go die.",
 	tags = {
 		"blitz",
 	},

@@ -108,7 +108,7 @@ return {
 	export_mod = "hud_studio_owo",
 	grid_cols = 0,
 	grid_rows = 0,
-	label = "Ammo",
+	label = "OwO Ammo",
 	localizations = {},
 	mod_version = 2,
 	name = "owo_ammo",
