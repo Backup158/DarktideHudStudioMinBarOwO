@@ -155,7 +155,7 @@ return {
 	grid_rows = 0,
 	label = "Player only Panel",
 	localizations = {},
-	name = "player_only_panel",
+	name = "owo_player_only_panel",
 	nodes = {
 		{
 			callbacks = {

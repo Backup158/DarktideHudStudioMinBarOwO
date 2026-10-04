@@ -32,7 +32,7 @@ return {
 	grid_rows = 0,
 	label = "Near Crosshair",
 	localizations = {},
-	name = "near_crosshair",
+	name = "owo_near_crosshair",
 	nodes = {
 		{
 			callbacks = {

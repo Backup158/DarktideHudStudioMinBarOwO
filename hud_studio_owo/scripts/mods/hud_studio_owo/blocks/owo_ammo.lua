@@ -111,7 +111,7 @@ return {
 	label = "Ammo",
 	localizations = {},
 	mod_version = 2,
-	name = "ammo",
+	name = "owo_ammo",
 	nodes = {
 		{
 			callbacks = {

@@ -23,10 +23,10 @@ mod.on_all_mods_loaded = function()
       author = "Backup158",
       blocks = {
         -- one path per block
-        "scripts/mods/hud_studio_owo/blocks/player_only_panel",
-        "scripts/mods/hud_studio_owo/blocks/near_crosshair",
-        "scripts/mods/hud_studio_owo/blocks/ammo",
-        "scripts/mods/hud_studio_owo/blocks/blitz_box_below_max",
+        "scripts/mods/hud_studio_owo/blocks/owo_player_only_panel",
+        "scripts/mods/hud_studio_owo/blocks/owo_near_crosshair",
+        "scripts/mods/hud_studio_owo/blocks/owo_ammo",
+        "scripts/mods/hud_studio_owo/blocks/owo_blitz_box_below_max",
     },
   })
 end

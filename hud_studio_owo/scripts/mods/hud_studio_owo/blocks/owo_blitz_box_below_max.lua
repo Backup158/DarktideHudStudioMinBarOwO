@@ -8,9 +8,9 @@ return {
 	export_mod = "hud_studio_owo",
 	grid_cols = 0,
 	grid_rows = 0,
-	label = "Blitz Box (Below Max)",
+	label = "OwO Blitz Box (Below Max)",
 	localizations = {},
-	name = "blitz_box_below_max",
+	name = "owo_blitz_box_below_max",
 	nodes = {
 		{
 			callbacks = {
