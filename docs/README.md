@@ -63,7 +63,7 @@ There are disabled options to show the raw numbers.
         - Disable this if it's annoying. I'm leaving this here for when there's a workaround found.
 
 ### Near Crosshair
-Low opacity numbers for a quick glance while fighting.
+Low opacity numbers for a quick glance while fighting. These don't have any hotkeys since I don't really want to see these outside of their respective context.
 - Dodge count / max
     - Only appears when at <= 1
     - Turns red as you go more negative
@@ -75,7 +75,7 @@ Low opacity numbers for a quick glance while fighting.
     - Decimal point accuracy so you know if it's safe to use Brain Burst
     - :3
 - Weapon heat
-    - Appears when the respective weapon is held
+    - Appears when the respective weapon is held and heat is >= 90%
     - I put these in the same place for melee and ranged
     - One is orange and one is blue. I forgot which is which but you can also just look at the thing in your hand
 
