@@ -54,13 +54,17 @@ There are disabled options to show the raw numbers.
 - Blitz Icon
     - Only on demand. I know what blitz I have equipped.
 - Blitz count / max
-    - Appears when blitz is in hand and not at max charges
+    - Appears when blitz is in hand and there is only one left
+    - Appears when inspecting while blitz is in hand
+    - Appears on hotkey T
 - Blitz recharge bar
-    - Appears when charge > 80% and not at max charges
-    - There's a numerical version I have disabled by default
+    - Appears when charge > 70%
+    - Disabled by default
     - Note that neither of them work with talent regeneration, where they'll get stuck at 100%
         - Namely this affects Demolition Stockpile, which is not good for me as a Veteran player
         - Disable this if it's annoying. I'm leaving this here for when there's a workaround found.
+- Blitz recharge numerical
+    - Same and also disabled
 
 ### Near Crosshair
 Low opacity numbers for a quick glance while fighting. These don't have any hotkeys since I don't really want to see these outside of their respective context.
