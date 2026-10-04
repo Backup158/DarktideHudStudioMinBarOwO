@@ -1,28 +1,5 @@
 local mod = get_mod("hud_studio_owo")
 
--- #############################
--- Data
--- #############################
--- ###############
--- Requirements and Performance
--- ###############
-
--- ###############
--- Mod Locals
--- ###############
-
--- #############################
--- Helper Functions
--- #############################
-
-
--- #########################################
--- Hooks
--- #########################################
-
--- #########################################
--- Event Executions
--- #########################################
 -- registering after all mods have loaded ensures that load order does not matter.
 mod.on_all_mods_loaded = function()
 
@@ -46,8 +23,10 @@ mod.on_all_mods_loaded = function()
       author = "Backup158",
       blocks = {
         -- one path per block
-        -- "scripts/mods/hud_studio_owo/",
-        -- "scripts/mods/hud_studio_owo/",
+        "scripts/mods/hud_studio_owo/blocks/player_only_panel",
+        "scripts/mods/hud_studio_owo/blocks/near_crosshair",
+        "scripts/mods/hud_studio_owo/blocks/ammo",
+        "scripts/mods/hud_studio_owo/blocks/blitz_box_below_max",
     },
   })
 end
