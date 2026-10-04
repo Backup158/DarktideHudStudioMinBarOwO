@@ -66,6 +66,8 @@ There are disabled options to show the raw numbers.
 - Blitz recharge numerical
     - Same and also disabled
 
+![blitz showing](./assets/images/owo_blitz_count.png)
+
 ### Near Crosshair
 Low opacity numbers for a quick glance while fighting. These don't have any hotkeys since I don't really want to see these outside of their respective context.
 - Dodge count / max
@@ -82,6 +84,12 @@ Low opacity numbers for a quick glance while fighting. These don't have any hotk
     - Appears when the respective weapon is held and heat is >= 90%
     - I put these in the same place for melee and ranged
     - One is orange and one is blue. I forgot which is which but you can also just look at the thing in your hand
+
+![weapon heat](./assets/images/owo_hud_crosshair_heat.png)
+
+Peril from here and in the Player Panel bar:
+
+![peril](./assets/images/owo_hud_peril.png)
 
 # Installation
 I assume you know how to install mods. If not, here's the [guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
