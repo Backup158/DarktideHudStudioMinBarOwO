@@ -155,6 +155,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Player only Panel",
 	localizations = {},
+	mod_version = 2,
 	name = "owo_player_only_panel",
 	nodes = {
 		{
@@ -197,7 +198,7 @@ return {
 									op = "<",
 									rhs = {
 										kind = "fixed",
-										value = "30%",
+										value = 30,
 									},
 								},
 								{
@@ -279,7 +280,7 @@ return {
 									op = "<",
 									rhs = {
 										kind = "fixed",
-										value = "30%",
+										value = 30,
 									},
 								},
 								{
@@ -602,7 +603,7 @@ return {
 									op = ">",
 									rhs = {
 										kind = "fixed",
-										value = "80%",
+										value = 80,
 									},
 								},
 								{
@@ -986,6 +987,11 @@ return {
 	summary = "Compact player panel appear on change, low value, or hotkey.",
 	tags = {
 		"player",
+		"health",
+		"toughness",
+		"peril",
+		"stamina",
+		"ability",
 	},
 	transition = {
 		fade_out = 0.20000000000000001,
