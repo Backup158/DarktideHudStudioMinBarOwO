@@ -1,6 +1,6 @@
-title: "Darktide: LoadScreenDecorationRemover"
-repository: Backup158/DarktideLoadScreenDecorationRemover
-description: "Mod to remove overlays from loading screens."
+title: "Darktide: HUD Studio OwO HUD"
+repository: Backup158/DarktideHudStudioMinBarOwO
+description: "HUD Studio resource for contextual, minimalist displays."
 theme: 'jekyll-theme-slate'
 plugins: 
   - jekyll-gfm-admonitions
