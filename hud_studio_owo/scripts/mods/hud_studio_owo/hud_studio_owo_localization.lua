@@ -2,10 +2,10 @@ local mod = get_mod("hud_studio_owo")
 
 return {
 	mod_name = {
-		en = "HUD Studio - Opposition within Oligarchy",
+		en = "HUD Studio - Opposition within Oligarchy, Hussies Under Duress (OwO HUD)",
 	},
 	mod_description = {
-		en = "HUD Studio preset for minimalist HUD blocks using bars.",
+		en = "HUD Studio block library for minimalist, contextual displays.",
 	},
 	enable_debug_mode = {
 		en = "Enable Debug Mode",
