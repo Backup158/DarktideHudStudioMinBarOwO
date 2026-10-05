@@ -14,7 +14,6 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
 
 ### Player Panel
 - Toughness and Toughness text
-    - Appears when changed then fades
     - Appears at < 30%
 - Health and Health text
     - Appears when changed then fades
