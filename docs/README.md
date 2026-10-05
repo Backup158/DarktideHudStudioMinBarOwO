@@ -29,6 +29,59 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
 
 ![player panel ammo psyker](./assets/images/owo_hud_player_ammo_psyker.png)
 
+### Player Panel Icons and Progress
+Alternative version of player panel with no text, focusing on cooldown availability. These can appear on demand, but note that some of them will still be hidden when the value is high enough (such as Stamina >= 50% still being hidden).
+
+From left to right, top to bottom:
+- Ability
+    - Appears when >= 80% readiness
+    - Starts at faded yellow (like a dark mustard), then becomes full yellow when a charge is ready
+- Stamina
+    - Fades in and becomes darker as you use it
+    - Starts out not visible
+    - < 50% is faded brown-orange
+    - < 25% is brown-orange
+    - < 15% is red
+    - 0% is black
+- Health
+    - Appears when changed or < 30%
+    - [75%, 100%] is bright green
+    - [50%, 74%] is more yellow-green
+    - [25%, 49%] is yellow
+    - [15%, 24%] is orange-yellow
+    - [0%, 14%] is red
+    - Wounds are not shown and you are expected to just know that based on percentage
+- Hives Cum Stimm
+    - Overlayed with Health
+    - Appears when >= 80% readiness
+    - Starts at faded pink, then becomes full pink when ready
+- Armor
+    - Appears when < 30%
+    - Overtoughness is yellow
+    - [50%, 100%] is blue
+    - [25%, 49%] is darker blue
+    - [5%, 24%] is even darker blue
+    - Below that is basically black
+- Ability Progress Bar
+    - Below the row of icons
+    - Appears when ability is active
+- Peril Progress Bar
+    - Below ability progress
+    - Same rules as previous panel (it's copied over)
+- Hives Cum Stimm Progress Bar
+    - In the same place as peril
+    - Appears when Stimm is active and player is Hives Cum
+    - I have it like that since it'd activate for other Stimms, so this would cover peril for Psykers
+    - If you want both, remove the condition, then move this down, then move the block up so this one isn't offscreen (or peril)
+
+![player icon ability used and health/armor force shown](./assets/images/owo_hud_player_icon_ability_and_forced_health_armor.png)
+
+![player icon ability ready with low stamina](./assets/images/owo_hud_player_icon_ability_ready_low_stamina.png)
+
+![player icon ability ready and stimm used](./assets/images/owo_hud_player_icon_ability_ready_stimm_used.png)
+
+![player icon ability ready and stimm recharging](./assets/images/owo_hud_player_icon_ability_ready_stimm_recharging.png)
+
 ### Ammo
 These appear on hotkey and inspecting the relevant weapon. All of these show value by color-coding.
 - Special Ammo

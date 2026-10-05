@@ -1,3 +1,10 @@
+# 1.1.0 - 2026-10-04
+## New
+- Player Panel Icons and Progress
+    - Contextual color-coded icons for ability, stamina, health, and armor
+    - Progress bars for ability timer, Stimm timer as Hives Cum, and Peril
+    - Default position overlaps with Blitz. Move one of them over if you use these.
+
 # 1.0.1 - 2026-10-04
 ## Fix
 - Incorrect % conditions for

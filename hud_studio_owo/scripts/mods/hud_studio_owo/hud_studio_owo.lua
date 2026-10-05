@@ -27,6 +27,7 @@ mod.on_all_mods_loaded = function()
         "scripts/mods/hud_studio_owo/blocks/owo_near_crosshair",
         "scripts/mods/hud_studio_owo/blocks/owo_ammo",
         "scripts/mods/hud_studio_owo/blocks/owo_blitz_box_below_max",
+        "scripts/mods/hud_studio_owo/blocks/owo_player_panel_icons_and_progress_bars",
     },
   })
 end
