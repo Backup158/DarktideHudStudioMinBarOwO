@@ -162,12 +162,15 @@ Peril from here and in the Player Panel bar:
 ### Ally Panel Icons [WIP]
 Appears if alive and not a bot
 
-*If I did this correctly* it should be easy to add for a specified player.
+!!! Right now, I think the logic can be tedious to change for blitz icon and stimm conditions. There's also a few things I'm iffy on, and I haven't used these in game. Consider this a prerelease block. I just realized I don't even have the disabled icon status yet lol.
 
 - [ODO] Class icon and character name
     - [Planned] Also appear when any of the other icons appear
 - Health Icon
     - Color-coded like the player panel
+    - Appears on change
+    - [Planned] Stay on low. <100 hp or something, whatever makes Poxbursters and Snipers lethal
+    - [Planned] Appear on disabled/downed
 - [ODO] Health Details
     - Health bar with wound segments
     - Corruption overlay
@@ -183,6 +186,7 @@ Appears if alive and not a bot
 - Blitz used
     - If has charges and just used (when < 2 charges), appear and linger
     - [ODO] Numerical count/max
+    - [Planned] Streamline logic for material and conditions
 - Ability Icon
     - Fades in when charging
     - Appears at 80%, and fully shows at 100% before fading out
@@ -195,5 +199,9 @@ Appears if alive and not a bot
     - Appears and lingers on pickup
     - Color-coded based on what it is
     - [Planned] If med stimm, show if someone on the team is on the last wound
+- [Planned] Player Status Needs Help
+    - Net, dog, etc.
+    - Countdown for rescue
+    - I was thinking this would appear over the full thing
 
 ![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
