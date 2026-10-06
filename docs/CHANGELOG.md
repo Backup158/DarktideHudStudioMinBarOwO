@@ -1,3 +1,10 @@
+# 1.2.0 - 2026-10-XXX
+## New
+- Ally Panel
+## Fix
+- Both player panels were appearing in the Mourningstar
+- 
+
 # 1.1.0 - 2026-10-04
 ## New
 - Player Panel Icons and Progress

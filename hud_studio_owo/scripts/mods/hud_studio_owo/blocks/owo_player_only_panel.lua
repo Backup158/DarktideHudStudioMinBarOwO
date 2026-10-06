@@ -151,11 +151,15 @@ return {
 		1080,
 	},
 	export_mod = "hud_studio_owo",
+	gamemodes = {
+		meatgrinder = true,
+		mission = true,
+	},
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Player only Panel",
 	localizations = {},
-	mod_version = 2,
+	mod_version = 3,
 	name = "owo_player_only_panel",
 	nodes = {
 		{
@@ -874,11 +878,11 @@ return {
 					},
 				},
 			},
-			id = "peril_fade_in_threshold",
+			id = "peril_fade_in_threshold_copy",
 			label = "Peril (Fade in threshold)",
 			offset = {
-				-76,
-				246,
+				-68,
+				254,
 			},
 			style = {
 				color = {
@@ -982,6 +986,7 @@ return {
 		kind = "fixed",
 		value = 0.67000000000000004,
 	},
+	save_name = "owo_player_only_panel",
 	scale_anchor = "center",
 	screen_anchor = "bottom",
 	summary = "Compact player panel appear on change, low value, or hotkey.",

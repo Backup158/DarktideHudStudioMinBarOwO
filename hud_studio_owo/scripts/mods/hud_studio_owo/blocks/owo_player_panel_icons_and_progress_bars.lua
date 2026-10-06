@@ -28,10 +28,15 @@ return {
 		1080,
 	},
 	export_mod = "hud_studio_owo",
+	gamemodes = {
+		meatgrinder = true,
+		mission = true,
+	},
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Player Panel Icons and Progress Bars",
 	localizations = {},
+	mod_version = 2,
 	name = "owo_player_panel_icons_and_progress_bars",
 	nodes = {
 		{
@@ -280,6 +285,9 @@ return {
 					69,
 					69,
 				},
+				transition = {
+					fade_out = 0.40000000000000002,
+				},
 			},
 			type = "rect",
 			values = {
@@ -465,6 +473,9 @@ return {
 				size = {
 					69,
 					69,
+				},
+				transition = {
+					fade_out = 0.20000000000000001,
 				},
 			},
 			type = "rect",
@@ -920,6 +931,7 @@ return {
 		kind = "fixed",
 		value = 0.67000000000000004,
 	},
+	save_name = "owo_player_panel_icons_and_progress_bars",
 	scale_anchor = "origin",
 	screen_anchor = "bottom",
 	summary = "Contextual color-coded icons for player stats and abilities. Progress bars for ability and Scum stimms.",
@@ -959,5 +971,6 @@ return {
 			},
 		},
 		kind = "conditions",
+		on = false,
 	},
 }
