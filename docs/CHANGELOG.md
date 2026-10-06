@@ -1,4 +1,4 @@
-# 1.2.0 - 2026-10-XXX
+# 1.2.0_beta - 2026-10-06
 ## New
 - Ally Panel
     - Contextual color-coded icons with details revealed on demand

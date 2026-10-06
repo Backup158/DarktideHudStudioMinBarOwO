@@ -8,6 +8,6 @@ return {
 			mod_localization = "hud_studio_owo/scripts/mods/hud_studio_owo/hud_studio_owo_localization",
 		})
 	end,
-	version = "1.0.0",
+	version = "1.2.0",
 	packages = {},
 }
