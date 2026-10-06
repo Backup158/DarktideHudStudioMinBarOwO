@@ -9,8 +9,22 @@ Just installing this won't change anything; this is just a resource for you to u
 
 ![player hud with most](./assets/images/owo_hud_show_all.png)
 
-## Blocks
+# Installation
+I assume you know how to install mods. If not, here's the [guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
+1. Install [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263)
+2. Install this mod (anywhere in the load order)
+3. Open the game and load a character
+4. Open the HUD Studio menu (set keybind in Mod Options)
+5. Import blocks from this mod's library
+
+Move and edit them to your heart's desire!
+
+![you don't want to know](./assets/images/hud_studio_owo_banner.png)
+
+# Blocks
 By default, all blocks will also appear on demand when you hold the hotkey `T`.
+
+Elements marked [ODO] only appear when using the hotkey.
 
 ### Player Panel
 - Toughness and Toughness text
@@ -105,8 +119,8 @@ There are disabled options to show the raw numbers.
 ![player panel ammo special](./assets/images/owo_hud_ammo_special.png)
 
 ### Blitz Box (Below Max)
-- Blitz Icon
-    - Only on demand. I know what blitz I have equipped.
+- [ODO] Blitz Icon
+    - I know what blitz I have equipped.
 - Blitz count / max
     - Appears when blitz is in hand and there is only one left
     - Appears when inspecting while blitz is in hand
@@ -145,14 +159,41 @@ Peril from here and in the Player Panel bar:
 
 ![peril](./assets/images/owo_hud_peril.png)
 
-# Installation
-I assume you know how to install mods. If not, here's the [guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
-1. Install [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263)
-2. Install this mod (anywhere in the load order)
-3. Open the game and load a character
-4. Open the HUD Studio menu (set keybind in Mod Options)
-5. Import blocks from this mod's library
+### Ally Panel Icons [WIP]
+Appears if alive and not a bot
 
-Move and edit them to your heart's desire!
+*If I did this correctly* it should be easy to add for a specified player.
 
-![you don't want to know](./assets/images/hud_studio_owo_banner.png)
+- [ODO] Class icon and character name
+    - [Planned] Also appear when any of the other icons appear
+- Health Icon
+    - Color-coded like the player panel
+- [ODO] Health Details
+    - Health bar with wound segments
+    - Corruption overlay
+    - Numerical current / max
+- [ODO] Toughness Details Icon
+    - Blue at max, gold above (if I did it correctly). Fades out as it reduces.
+    - Gone when empty because...
+- Toughness Broken Icon
+    - Only appears at 0% toughness
+- Ammo Icon
+    - Color-coded based on reserve ammo %
+    - [ODO] Numerical %
+- Blitz used
+    - If has charges and just used (when < 2 charges), appear and linger
+    - [ODO] Numerical count/max
+- Ability Icon
+    - Fades in when charging
+    - Appears at 80%, and fully shows at 100% before fading out
+    - If revealed on demand, you can see it at even lower opacities (eg < 50% is only 25% opaque)
+- Pocketable (crate/ammo)
+    - Appears and lingers when picking it up
+    - [Planned] If medicrate, show if team health is low
+    - [Planned] If ammo crate, show if team ammo is low
+- Stimm (PROBABLY BEST TO DISABLE RIGHT NOW)
+    - Appears and lingers on pickup
+    - Color-coded based on what it is
+    - [Planned] If med stimm, show if someone on the team is on the last wound
+
+![ally panel](./assets/images/owo_hud_ally_panel_icons.png)

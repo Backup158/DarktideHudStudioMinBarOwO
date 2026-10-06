@@ -1,9 +1,10 @@
 # 1.2.0 - 2026-10-XXX
 ## New
 - Ally Panel
+    - Contextual color-coded icons with details revealed on demand
+    - Not complete but I'll share it anyways
 ## Fix
 - Both player panels were appearing in the Mourningstar
-- 
 
 # 1.1.0 - 2026-10-04
 ## New
