@@ -3,6 +3,7 @@
 - Ally Panel
     - Contextual color-coded icons with details revealed on demand
     - Not complete but I'll share it anyways
+- AML support
 ## Fix
 - Both player panels were appearing in the Mourningstar
 
