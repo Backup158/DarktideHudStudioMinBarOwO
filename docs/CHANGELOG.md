@@ -1,3 +1,19 @@
+# 1.2.1 - 2026-10-xx
+## New
+- Ally Panel
+    - Stim/Crate conditions
+        - Show if disabled
+        - Show if just died
+        - Heal Stimm - Show if someone is on their last wound
+        - Med crate - Show if team is missing 500 hp
+        - Ammo crate - Show if team is low
+    - Shows health if disabled
+    - Shows health bar if downed (darker and more translucent)
+    - Player name includes True Level
+## Fix
+- Ally Panel
+    - Can now be added set for each player
+
 # 1.2.0_beta - 2026-10-06
 ## New
 - Ally Panel

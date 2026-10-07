@@ -11,6 +11,6 @@ return {
 	require = {
 		"hud_studio",
 	},
-	version = "1.2.0_beta",
+	version = "1.2.1",
 	packages = {},
 }
