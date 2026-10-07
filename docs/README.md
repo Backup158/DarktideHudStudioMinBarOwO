@@ -159,49 +159,63 @@ Peril from here and in the Player Panel bar:
 
 ![peril](./assets/images/owo_hud_peril.png)
 
-### Ally Panel Icons [WIP]
+### Ally Panel Icons
 Appears if alive and not a bot
 
-!!! Right now, I think the logic can be tedious to change for blitz icon and stimm conditions. There's also a few things I'm iffy on, and I haven't used these in game. Consider this a prerelease block. I just realized I don't even have the disabled icon status yet lol.
-
-- [ODO] Class icon and character name
-    - [Planned] Also appear when any of the other icons appear
+- Class icon, character name, and True Level
+    - Appears when needs help 
+    - Appears OD
+    - [Planned] Also appear when important other icons appear
 - Health Icon
     - Color-coded like the player panel
     - Appears on change
+    - Appear on disabled
     - [Planned] Stay on low. <100 hp or something, whatever makes Poxbursters and Snipers lethal
-    - [Planned] Appear on disabled/downed
-- [ODO] Health Details
+- Health Details
     - Health bar with wound segments
-    - Corruption overlay
-    - Numerical current / max
+        - Appears OD
+        - Appears when downed
+    - [ODO] Corruption overlay
+    - [ODO] Numerical current / max (1 decimal)
 - [ODO] Toughness Details Icon
-    - Blue at max, gold above (if I did it correctly). Fades out as it reduces.
+    - Blue at max, gold when above. Fades out as it reduces.
     - Gone when empty because...
 - Toughness Broken Icon
-    - Only appears at 0% toughness
+    - Only appears at 0% toughness.
+    - This is also a deep red, in contrast with the blue.
 - Ammo Icon
     - Color-coded based on reserve ammo %
     - [ODO] Numerical %
 - Blitz used
     - If has charges and just used (when < 2 charges), appear and linger
+    - Appears as a lightning bolt if it recharges, grenade otherwise.
     - [ODO] Numerical count/max
-    - [Planned] Streamline logic for material and conditions
 - Ability Icon
     - Fades in when charging
     - Appears at 80%, and fully shows at 100% before fading out
     - If revealed on demand, you can see it at even lower opacities (eg < 50% is only 25% opaque)
-- Pocketable (crate/ammo)
-    - Appears and lingers when picking it up
-    - [Planned] If medicrate, show if team health is low
-    - [Planned] If ammo crate, show if team ammo is low
-- Stimm (PROBABLY BEST TO DISABLE RIGHT NOW)
-    - Appears and lingers on pickup
+    - By default this uses the Strike icon, like in the Player Panel Icons, but there's a copy to use the actual icon
+- Deployable (crate/ammo)
+    - Appears and lingers when picking it up, getting disabled, going down, or dying
+        - Disabled/down gives more info for who to help
+        - Death is debatable but I like knowing if we just lost something
+    - Medical Crate: Show if team health is low 
+        - Low means missing 500 hitpoints, because that's the capacity of a Medical Crate
+        - This does not account for clearing corruption when a Veteran is alive with Field Improvisation
+    - Ammo Cache: Show if team ammo is low.
+        - If >= 3 team members have < 50% ammo.
+        - If >= 2 team members have < 20% ammo.
+        - I hard-coded these thresholds based on the normal conditions of Ammo crates having 4 uses of 100% reserve restore. 
+        - Havoc players can suffer because isn't that what you want???
+        - lol just kidding, you can open the code and edit those thresholds if you'd rather have it earlier/later.
+- Stimm
+    - Appears and lingers on pickup, getting disabled, going down, or dying
+        - Disabled/down gives more info for who to help
+        - Death is debatable but I like knowing if we just lost something
     - Color-coded based on what it is
-    - [Planned] If med stimm, show if someone on the team is on the last wound
-- [Planned] Player Status Needs Help
+    - If med stimm, show if someone on the team is on the last wound
+- Player Status Needs Help
     - Net, dog, etc.
-    - Countdown for rescue
-    - I was thinking this would appear over the full thing
+    - Just a generic hand icon. Disabled by default. I recommend using the blocks from [Player State Indicators](https://www.nexusmods.com/warhammer40kdarktide/mods/635) instead
 
 ![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
