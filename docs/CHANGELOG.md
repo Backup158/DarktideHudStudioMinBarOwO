@@ -1,3 +1,15 @@
+# 1.2.2 - 2026-10-08
+## Changed
+- Ally Panel
+    - Toughness break also needs not downed
+    - Spaced out blitz and ability to reduce overlapping with health
+    - Default opacity from 0.5 to 0.8
+    - Default ability is the real picture
+    - Global fade out of 0.25
+## Fix
+- Ally Panel
+    - Opacity for downed was swapped for health
+
 # 1.2.1 - 2026-10-07
 ## New
 - Ally Panel

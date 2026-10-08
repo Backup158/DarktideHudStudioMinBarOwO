@@ -1,231 +1,4 @@
 return {
-	deleted_nodes = {
-		{
-			callbacks = {
-				value = {
-					material = {
-						field = "state.status_icon",
-						kind = "source",
-						source = "player_2",
-					},
-					visible = {
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "state.downed",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "==",
-								},
-							},
-						},
-						kind = "conditions",
-					},
-				},
-			},
-			id = "status",
-			label = "Status",
-			offset = {
-				-435,
-				238,
-			},
-			style = {
-				color = {
-					255,
-					255,
-					255,
-					255,
-				},
-				size = {
-					100,
-					100,
-				},
-			},
-			type = "rect",
-			values = {},
-		},
-		{
-			id = "rect_1",
-			offset = {
-				0,
-				0,
-			},
-			style = {
-				color = {
-					255,
-					255,
-					255,
-					255,
-				},
-				size = {
-					100,
-					100,
-				},
-			},
-			type = "rect",
-			values = {
-				material = "content/ui/materials/icons/presets/preset_11",
-			},
-		},
-		{
-			callbacks = {
-				value = {
-					color = {
-						kind = "thresholds",
-						thresholds = {
-							current = {
-								field = "blitz.count",
-								kind = "source",
-								source = "player_2",
-								value = 0,
-							},
-							list = {
-								{
-									color = {
-										255,
-										114,
-										0,
-										0,
-									},
-									pct = 0,
-								},
-								{
-									color = {
-										255,
-										202,
-										0,
-										0,
-									},
-									pct = 1,
-								},
-								{
-									color = {
-										120,
-										255,
-										255,
-										255,
-									},
-									pct = 2,
-								},
-							},
-							max = {
-								field = "blitz.max_count",
-								kind = "source",
-								source = "player_2",
-								value = 100,
-							},
-							payload = "color",
-							scale = "number",
-						},
-					},
-					visible = {
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "blitz.uses_charges",
-										kind = "source",
-										source = "player_2",
-										value = "uses",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "blitz.is_refilling",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "blitz.count",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "<",
-									rhs = {
-										kind = "fixed",
-										value = 2,
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "blitz.count",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "changed",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "blitz.uses_charges",
-										kind = "source",
-										source = "player_2",
-										value = "uses",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "blitz.is_refilling",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-							},
-						},
-						kind = "conditions",
-					},
-				},
-			},
-			id = "blitz_icon_changed_and_2_rechargable",
-			label = "Blitz Icon (Changed and <2) (Rechargable)",
-			offset = {
-				-1520,
-				300,
-			},
-			style = {
-				color = {
-					255,
-					255,
-					255,
-					255,
-				},
-				size = {
-					25,
-					25,
-				},
-				transition = {
-					fade_out = 0.20000000000000001,
-				},
-			},
-			type = "rect",
-			values = {
-				material = "content/ui/materials/icons/presets/preset_11",
-			},
-		},
-	},
 	design_aspect = 1.7777777777777777,
 	design_hud_scale = 0.59999999999999998,
 	design_resolution = {
@@ -241,7 +14,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Ally Icons",
 	localizations = {},
-	mod_version = 2,
+	mod_version = 3,
 	name = "owo_ally_icons",
 	nodes = {
 		{
@@ -401,7 +174,7 @@ visible = false",
 			id = "pocketable_icon_linger_on_pickup",
 			label = "Pocketable Icon (Linger On Pickup)",
 			offset = {
-				-1453,
+				-1451,
 				304,
 			},
 			style = {
@@ -663,8 +436,8 @@ visible = false",
 			id = "ability_charging__80",
 			label = "Ability (Charging > 80%)",
 			offset = {
-				-1495,
-				297,
+				-1494,
+				298,
 			},
 			style = {
 				color = {
@@ -680,7 +453,6 @@ visible = false",
 				transition = {
 					fade_out = 0.29999999999999999,
 				},
-				visible = false,
 			},
 			type = "rect",
 			values = {},
@@ -813,8 +585,8 @@ visible = false",
 			id = "ability_icon_charging__80",
 			label = "Ability Icon (Charging > 80%)",
 			offset = {
-				-1495,
-				297,
+				-1494,
+				298,
 			},
 			style = {
 				color = {
@@ -830,6 +602,7 @@ visible = false",
 				transition = {
 					fade_out = 0.29999999999999999,
 				},
+				visible = false,
 			},
 			type = "rect",
 			values = {
@@ -886,8 +659,8 @@ visible = false",
 			id = "blitz_detail_text",
 			label = "Blitz Detail Text",
 			offset = {
-				-1520,
-				321,
+				-1519,
+				322,
 			},
 			style = {
 				align = "top_center",
@@ -1043,8 +816,8 @@ end\
 			id = "blitz_icon_changed_and__2",
 			label = "Blitz Icon (Changed and < 2)",
 			offset = {
-				-1520,
-				300,
+				-1519,
+				301,
 			},
 			style = {
 				color = {
@@ -1454,10 +1227,42 @@ end\
 					},
 					visible = {
 						conditions = {
-							rows = {},
+							rows = {
+								{
+									join = "and",
+									lhs = {
+										field = "state.alive",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "state.downed",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "false",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "status.toughness",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+							},
 						},
 						field = "status.toughness_broken",
-						kind = "source",
+						kind = "conditions",
 						source = "player_2",
 					},
 				},
@@ -1554,19 +1359,19 @@ end\
 							list = {
 								{
 									color = {
-										255,
-										255,
-										139,
-										188,
+										138,
+										137,
+										75,
+										101,
 									},
 									pct = 0,
 								},
 								{
 									color = {
-										184,
-										103,
-										53,
-										74,
+										255,
+										255,
+										139,
+										188,
 									},
 									pct = 0,
 								},
@@ -1787,11 +1592,11 @@ end\
 							},
 							list = {
 								{
-									number = 1,
+									number = 0.33000000000000002,
 									pct = 0,
 								},
 								{
-									number = 0.33000000000000002,
+									number = 1,
 									pct = 0,
 								},
 							},
@@ -1844,6 +1649,19 @@ end\
 									rhs = {
 										kind = "fixed",
 										value = 100,
+									},
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.wounds",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "==",
+									rhs = {
+										kind = "fixed",
+										value = 1,
 									},
 								},
 							},
@@ -2018,18 +1836,18 @@ end\
 	},
 	opacity = {
 		kind = "fixed",
-		value = 0.5,
+		value = 0.80000000000000004,
 	},
 	save_name = "owo_ally_icons",
 	scale_anchor = "origin",
 	screen_anchor = "left",
-	script = {
-		body = "",
-	},
 	summary = "Contextual Icons indicating imminent danger and available equipment",
 	tags = {
 		"ally",
 		"team",
+	},
+	transition = {
+		fade_out = 0.25,
 	},
 	version = 2,
 	visible = {
