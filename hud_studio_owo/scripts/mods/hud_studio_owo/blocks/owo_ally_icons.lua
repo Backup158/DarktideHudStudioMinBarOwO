@@ -1917,7 +1917,7 @@ end\
 								{
 									join = "or",
 									lhs = {
-										field = "state.disabled",
+										field = "state.requires_help",
 										kind = "source",
 										source = "player_2",
 									},

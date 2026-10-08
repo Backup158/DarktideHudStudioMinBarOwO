@@ -164,7 +164,6 @@ Appears if alive and not a bot
 
 - Class icon, character name, and True Level
     - Appears when needs help or OD
-    - [Planned] Also appear when important other icons appear
 - Health Icon
     - Appears on change, needs help, or < 100 hp
         - The health threshold is around when Poxbursters and Snipers lethal in normal matches
