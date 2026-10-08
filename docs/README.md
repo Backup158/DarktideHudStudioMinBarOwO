@@ -163,23 +163,20 @@ Peril from here and in the Player Panel bar:
 Appears if alive and not a bot
 
 - Class icon, character name, and True Level
-    - Appears when needs help 
-    - Appears OD
+    - Appears when needs help or OD
     - [Planned] Also appear when important other icons appear
 - Health Icon
+    - Appears on change, needs help, or < 100 hp
+        - The health threshold is around when Poxbursters and Snipers lethal in normal matches
+        - When downed, icon appears but at low opacity
     - Color-coded like the player panel
-    - Appears on change
-    - Appear on disabled
-    - [Planned] Stay on low. <100 hp or something, whatever makes Poxbursters and Snipers lethal
-- Health Details
+- [ODO] Health Details
     - Health bar with wound segments
-        - Appears OD
-        - Appears when downed
-    - [ODO] Corruption overlay
-    - [ODO] Numerical current / max (1 decimal)
+    - Corruption overlay
+    - Numerical current / max (1 decimal)
 - [ODO] Toughness Details Icon
-    - Blue at max, gold when above. Fades out as it reduces.
-    - Gone when empty because...
+    - Blue at max, gold when above. Color fades out as it reduces.
+    - Disappears when empty because...
 - Toughness Broken Icon
     - Only appears at 0% toughness.
     - This is also a deep red, in contrast with the blue.
@@ -188,11 +185,10 @@ Appears if alive and not a bot
     - [ODO] Numerical %
 - Blitz used
     - If has charges and just used (when < 2 charges), appear and linger
-    - Appears as a lightning bolt if it recharges, grenade otherwise.
+    - Uses a lightning bolt icon if it recharges, grenade icon otherwise.
     - [ODO] Numerical count/max
 - Ability Icon
-    - Fades in when charging
-    - Appears at 80%, and fully shows at 100% before fading out
+    - Fades in when charging, appearing at 80%, and fully shows at 100% before fading out
     - If revealed on demand, you can see it at even lower opacities (eg < 50% is only 25% opaque)
     - By default this uses the Strike icon, like in the Player Panel Icons, but there's a copy to use the actual icon
 - Deployable (crate/ammo)

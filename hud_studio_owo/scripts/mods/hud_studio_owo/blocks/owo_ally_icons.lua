@@ -1776,6 +1776,33 @@ end\
 							scale = "percent",
 						},
 					},
+					opacity = {
+						kind = "thresholds",
+						thresholds = {
+							current = {
+								field = "state.downed",
+								kind = "source",
+								source = "player_2",
+								value = false,
+							},
+							list = {
+								{
+									number = 1,
+									pct = 0,
+								},
+								{
+									number = 0.33000000000000002,
+									pct = 0,
+								},
+							},
+							max = {
+								kind = "fixed",
+								value = 100,
+							},
+							payload = "number",
+							scale = "boolean",
+						},
+					},
 					visible = {
 						conditions = {
 							rows = {
@@ -1800,11 +1827,24 @@ end\
 								{
 									join = "or",
 									lhs = {
-										field = "state.disabled",
+										field = "state.requires_help",
 										kind = "source",
 										source = "player_2",
 									},
 									op = "true",
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.health",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 100,
+									},
 								},
 							},
 						},
@@ -1973,8 +2013,8 @@ end\
 		},
 	},
 	offset = {
-		31,
-		35,
+		47,
+		51,
 	},
 	opacity = {
 		kind = "fixed",
