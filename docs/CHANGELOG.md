@@ -1,4 +1,4 @@
-# 1.2.1 - 2026-10-xx
+# 1.2.1 - 2026-10-07
 ## New
 - Ally Panel
     - Stim/Crate conditions
