@@ -30,6 +30,11 @@
     - Name appears with health and toughness
     - Stimm now fades out quickly instead of disappearing immediately
     - Blitz icon is yellow until it's empty, where it's red (but not the deep red)
+## Fix
+- Ally check being interfered with when changing player source
+    - It was originally checking player 1, 2, 3, 4
+    - When importing as new player source, it would change 2 to 3 (or whatever), so that check would end up being 1, 3, 3, 4
+    - Now it does the same check but written differently so it doesn't get replaced
 
 # 1.2.2 - 2026-10-08
 ## Changed

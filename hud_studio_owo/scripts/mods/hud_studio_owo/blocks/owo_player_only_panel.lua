@@ -721,7 +721,6 @@ local deployable_held = player_alive and sources.player_1.pocketables and source
 \
 -- Visibility based on deployable ID\
 local deployable_id = tostring(sources.player_1 and sources.player_1.pocketables and sources.player_1.pocketables.id)\
-local team_members = {sources.player_1, sources.player_2, sources.player_3, sources.player_4 }\
 --     Medical crate\
 --     Show if teammates are missing the amount it can heal (not accounting for Field Improv corrution)\
 if (deployable_id == \"med_crate_pocketable\") then\
@@ -729,8 +728,8 @@ if (deployable_id == \"med_crate_pocketable\") then\
     local medical_crate_heal_amount = 500\
     local allied_missing_health = 0\
     -- Check each team member to find total missing hp\
-    for i = 1, #team_members do\
-        local player = team_members[i]\
+    for ally_iterator = 1, 4 do\
+        local player = sources[\"player_\"..tostring(ally_iterator)]\
         -- If alive and not bot, add missing health to tracker\
         if player and player.state and (player.state.alive) and (player.state.bot  == 0) then\
            local player_missing_health = 0\
@@ -750,8 +749,8 @@ elseif (deployable_id == \"ammo_cache_pocketable\") then\
     local players_real_low = 0\
     local players_half_ammo = 0\
     -- Check each team member to find total missing ammo\
-    for i = 1, #team_members do\
-        local player = team_members[i]\
+    for ally_iterator = 1, 4 do\
+        local player = sources[\"player_\"..tostring(ally_iterator)]\
         -- If alive, not bot, and uses ammo, add missing ammo to tracker\
         if player and (player.state and player.state.alive and (player.state.bot == 0)) and (player.equipment and player.ranged_uses_ammo and player.ranged_uses_ammo ~= 0) then\
            if (player.ammo_reserve_percent < 50) then\
@@ -833,10 +832,9 @@ local player_has_stimm = player_alive and sources.player_1 and sources.player_1.
 local player_has_heal_stimm = player_has_stimm and (sources.player_1.stimms.id == \"syringe_corruption_pocketable\")\
 if (player_has_heal_stimm) then\
     local ally_is_last_wound = false\
-    local teammates = {sources.player_1, sources.player_2, sources.player_3, sources.player_4}\
     local ally_iterator = 1\
-    while (not ally_is_last_wound) and (ally_iterator < #teammates) do\
-        local current_ally = teammates[ally_iterator]\
+    while (not ally_is_last_wound) and (ally_iterator < 4) do\
+        local current_ally = sources[\"player_\"..tostring(ally_iterator)]\
         if (current_ally and current_ally.state and current_ally.state.alive) and\
                 (current_ally and current_ally.state and current_ally.state.bot) and\
                 (current_ally and current_ally.status and current_ally.status.wounds) then\
