@@ -54,7 +54,9 @@ Elements marked [ODO] only appear when using the hotkey.
     - Not in the pictures because it's fully transparent at 0%, but it's below the stamina bar
 - Stimm
     - Appears if it's a med stimm and someone on the team is at 1 wound
-    - Color appears based on what you have
+    - Color-coded based currently held stimm
+        - Uses colors from RecolorStimms if you have that installed
+        - To use vanilla colors, duplicate the block --> go to this node --> Rectangle Style --> Color --> Change "Code" to "Data Source"
     - Hive Scumm have to check OD. The audio cue is enough for me.
 - Pocketable
     - Appears when team is low on the appropriate resource
@@ -246,6 +248,8 @@ Appears if alive and not a bot
         - Disabled/down gives more info for who to help
         - Death is debatable but I like knowing if we just lost something
     - Appears and stays while team is low (see specifics in Player Panel)
-    - Color-coded based on which stimm it is
+    - Color-coded based currently held stimm
+        - Uses colors from RecolorStimms if you have that installed
+        - To use vanilla colors, duplicate the block --> go to this node --> Rectangle Style --> Color --> Change "Code" to "Data Source"
 
 ![ally panel](./assets/images/owo_hud_ally_panel_icons.png)

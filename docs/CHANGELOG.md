@@ -3,12 +3,14 @@
 - Ally Panel
     - [ODO] Account name is now available without State Your Name
     - Names use player slot color
+    - Stimm color uses values from RecolorStimms if installed
 - Player Panel
     - Added missing corruption bar...
     - Stim and Pocketable are enabled now
         - Using conditions from Ally Panel
         - (Description will describe it here first)
         - Resized to stack next to ability
+        - Stimm color uses values from RecolorStimms if installed
     - Toughness bar background color turns red when breaking
 ## Change
 - Player Panel
