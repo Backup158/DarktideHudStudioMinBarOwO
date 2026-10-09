@@ -139,12 +139,13 @@ There are disabled options to show the raw numbers.
 ![player panel ammo special](./assets/images/owo_hud_ammo_special.png)
 
 ### Blitz Box (Below Max)
+All will appear on holding hotkey T
 - [ODO] Blitz Icon
     - I know what blitz I have equipped.
 - Blitz count / max
-    - Appears when blitz is in hand and there is only one left
-    - Appears when inspecting while blitz is in hand
-    - Appears on hotkey T
+    - Appears when 
+        - Blitz is in hand and there is only one left (and the max count is > 1)
+        - Blitz is in hand and inspecting
 - Blitz recharge bar
     - Appears when charge > 70%
     - Disabled by default
