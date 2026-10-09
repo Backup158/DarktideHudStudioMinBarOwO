@@ -5,7 +5,6 @@ return {
 		1920,
 		1080,
 	},
-	export_mod = "hud_studio_owo",
 	gamemodes = {
 		meatgrinder = true,
 		mission = true,
@@ -13,6 +12,7 @@ return {
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Player only Panel",
+	library_label = "OwO Player only Panel",
 	localizations = {},
 	mod_version = 4,
 	name = "owo_player_only_panel",
@@ -241,9 +241,7 @@ return {
 								},
 							},
 						},
-						field = "ability.is_ready",
 						kind = "conditions",
-						source = "player_1",
 					},
 				},
 			},
@@ -453,9 +451,7 @@ return {
 						source = "player_1",
 					},
 					text2 = {
-						field = "ability.name",
 						kind = "fixed",
-						source = "player_1",
 					},
 					text3 = {
 						field = "status.toughness_regular_max",
@@ -570,9 +566,7 @@ return {
 								},
 							},
 						},
-						field = "ability.is_ready",
 						kind = "conditions",
-						source = "player_1",
 					},
 				},
 			},
@@ -620,9 +614,7 @@ return {
 						source = "player_1",
 					},
 					max = {
-						field = "ability.cooldown_seconds_to_next_charge",
 						kind = "fixed",
-						source = "player_1",
 					},
 					visible = {
 						conditions = {
@@ -658,17 +650,13 @@ return {
 									},
 									op = "true",
 									rhs = {
-										field = "ability.held_seconds",
 										kind = "fixed",
-										source = "actions",
 										value = "t",
 									},
 								},
 							},
 						},
-						field = "ability.is_ready",
 						kind = "conditions",
-						source = "player_1",
 					},
 				},
 			},
@@ -768,20 +756,7 @@ elseif (deployable_id == \"ammo_cache_pocketable\") then\
 end\
 \
 visible = false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										kind = "fixed",
-									},
-									op = "==",
-								},
-							},
-						},
-						field = "pocketables.held",
 						kind = "code",
-						source = "player_1",
 					},
 				},
 			},
@@ -835,9 +810,7 @@ if RecolorStimms then\
     color = custom_stimm_color or vanilla_stimm_color\
 end\
 ",
-						field = "stimms.held_color",
 						kind = "code",
-						source = "player_1",
 					},
 					material = {
 						field = "stimms.icon_small",
@@ -873,22 +846,7 @@ if (player_has_heal_stimm) then\
 end\
 \
 visible = false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "ability.name",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "==",
-								},
-							},
-						},
-						field = "stimms.held",
 						kind = "code",
-						source = "player_1",
 					},
 				},
 			},
@@ -918,9 +876,7 @@ visible = false",
 			callbacks = {
 				value = {
 					color = {
-						field = "identity.slot_color",
 						kind = "thresholds",
-						source = "player_1",
 						thresholds = {
 							list = {
 								{
@@ -992,9 +948,7 @@ visible = false",
 						source = "player_1",
 					},
 					max = {
-						field = "ability.progress_percent_to_max_charges",
 						kind = "fixed",
-						source = "player_1",
 					},
 					visible = {
 						conditions = {
@@ -1154,7 +1108,7 @@ visible = false",
 	transition = {
 		fade_out = 0.20000000000000001,
 	},
-	version = 2,
+	version = 4,
 	visible = {
 		conditions = {
 			rows = {
