@@ -3,6 +3,98 @@ return {
 		{
 			callbacks = {
 				value = {
+					opacity = {
+						kind = "fixed",
+						thresholds = {
+							current = {
+								kind = "fixed",
+								value = 0,
+							},
+							list = {
+								{
+									number = 1,
+									pct = 0,
+								},
+							},
+							max = {
+								kind = "fixed",
+								value = 100,
+							},
+							payload = "number",
+							scale = "percent",
+						},
+					},
+					visible = {
+						conditions = {
+							rows = {
+								{
+									join = "and",
+									lhs = {
+										field = "state.alive",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "state.downed",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "false",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "status.toughness",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+							},
+						},
+						field = "status.toughness_broken",
+						kind = "conditions",
+						source = "player_2",
+					},
+				},
+			},
+			id = "toughness_broken_icon_copy",
+			label = "Toughness Broken Icon",
+			offset = {
+				104,
+				187,
+			},
+			style = {
+				color = {
+					255,
+					114,
+					0,
+					0,
+				},
+				size = {
+					15,
+					15,
+				},
+				transition = {
+					fade_out = 0.29999999999999999,
+				},
+			},
+			type = "rect",
+			values = {
+				material = "content/ui/materials/hud/interactions/icons/void_shield",
+			},
+		},
+		{
+			callbacks = {
+				value = {
 					color = {
 						kind = "thresholds",
 						thresholds = {
@@ -159,7 +251,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Player only Panel",
 	localizations = {},
-	mod_version = 3,
+	mod_version = 4,
 	name = "owo_player_only_panel",
 	nodes = {
 		{
@@ -240,6 +332,96 @@ return {
 					15,
 				},
 				transition = {
+					delay = 0.29999999999999999,
+					fade_out = 0.40000000000000002,
+				},
+			},
+			type = "progress_bar",
+			values = {
+				current = 60,
+				max = 100,
+			},
+		},
+		{
+			callbacks = {
+				value = {
+					current = {
+						field = "status.corruption_percent",
+						kind = "source",
+						source = "player_1",
+					},
+					segments = {
+						field = "status.wounds_max",
+						kind = "source",
+						source = "player_1",
+					},
+					visible = {
+						conditions = {
+							rows = {
+								{
+									join = "and",
+									lhs = {
+										field = "status.health",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "changed",
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.health_percent",
+										kind = "source",
+										source = "player_1",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 30,
+									},
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "t.held",
+										kind = "source",
+										source = "keys",
+									},
+									op = "true",
+								},
+							},
+						},
+						kind = "conditions",
+					},
+				},
+			},
+			id = "corruption",
+			label = "Corruption",
+			offset = {
+				-78,
+				208,
+			},
+			style = {
+				bg_color = {
+					0,
+					0,
+					0,
+					0,
+				},
+				color = {
+					255,
+					137,
+					56,
+					199,
+				},
+				fill_material = "content/ui/materials/hud/backgrounds/player_health_fill",
+				orientation = "right_left",
+				size = {
+					200,
+					15,
+				},
+				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -322,6 +504,7 @@ return {
 				font_size = 16,
 				shadow = true,
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -337,6 +520,102 @@ return {
 		{
 			callbacks = {
 				value = {
+					bg_color = {
+						kind = "thresholds",
+						thresholds = {
+							current = {
+								field = "status.toughness_broken",
+								kind = "source",
+								source = "player_1",
+								value = false,
+							},
+							list = {
+								{
+									color = {
+										255,
+										114,
+										0,
+										0,
+									},
+									pct = 0,
+								},
+								{
+									color = {
+										124,
+										0,
+										0,
+										0,
+									},
+									pct = 0,
+								},
+								{
+									color = {
+										124,
+										0,
+										0,
+										0,
+									},
+									pct = 0,
+								},
+							},
+							mirror = {
+								current = "current",
+								max = "max",
+							},
+							payload = "color",
+							scale = "boolean",
+						},
+					},
+					color = {
+						kind = "thresholds",
+						thresholds = {
+							behaviour = "gradient",
+							list = {
+								{
+									color = {
+										255,
+										120,
+										220,
+										255,
+									},
+									pct = 0,
+								},
+								{
+									color = {
+										255,
+										120,
+										220,
+										255,
+									},
+									pct = 100,
+								},
+								{
+									color = {
+										255,
+										255,
+										255,
+										117,
+									},
+									pct = 110,
+								},
+								{
+									color = {
+										255,
+										250,
+										255,
+										78,
+									},
+									pct = 111,
+								},
+							},
+							mirror = {
+								current = "current",
+								max = "max",
+							},
+							payload = "color",
+							scale = "percent",
+						},
+					},
 					current = {
 						field = "status.toughness",
 						kind = "source",
@@ -396,6 +675,7 @@ return {
 					15,
 				},
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -475,6 +755,7 @@ return {
 				font_size = 16,
 				shadow = true,
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -551,16 +832,17 @@ return {
 					0,
 				},
 				color = {
-					255,
-					255,
-					255,
-					255,
+					202,
+					158,
+					158,
+					158,
 				},
 				size = {
 					200,
 					15,
 				},
 				transition = {
+					delay = 0.29999999999999999,
 					fade_in = 0.20000000000000001,
 					fade_out = 0.20000000000000001,
 				},
@@ -654,6 +936,7 @@ return {
 					55,
 				},
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -672,6 +955,64 @@ return {
 						source = "player_1",
 					},
 					visible = {
+						body = "-- Always show if hotkey was held\
+local hotkey_held = sources.keys and sources.keys.t and sources.keys.t.held\
+if hotkey_held then return true end\
+\
+-- Has Deployable\
+local player_alive = sources.player_1 and sources.player_1.state and sources.player_1.state.alive\
+local deployable_held = player_alive and sources.player_1.pocketables and sources.player_1.pocketables.deployable_is_held\
+\
+-- Visibility based on deployable ID\
+local deployable_id = tostring(sources.player_1 and sources.player_1.pocketables and sources.player_1.pocketables.id)\
+local team_members = {sources.player_1, sources.player_2, sources.player_3, sources.player_4 }\
+--     Medical crate\
+--     Show if teammates are missing the amount it can heal (not accounting for Field Improv corrution)\
+if (deployable_id == \"med_crate_pocketable\") then\
+    --     500 hitpoints\
+    local medical_crate_heal_amount = 500\
+    local allied_missing_health = 0\
+    -- Check each team member to find total missing hp\
+    for i = 1, #team_members do\
+        local player = team_members[i]\
+        -- If alive and not bot, add missing health to tracker\
+        if player and player.state and (player.state.alive) and (player.state.bot  == 0) then\
+           local player_missing_health = 0\
+            if player.status then\
+                player_missing_health = player.status.health_max - player.status.health\
+            end\
+            allied_missing_health = allied_missing_health + player_missing_health\
+        end\
+    end\
+    -- show if missing\
+    if allied_missing_health >= medical_crate_heal_amount then return true end\
+--      Ammo Crate\
+--      Show if at least 2 teammates <20% or at least 3 <50%\
+elseif (deployable_id == \"ammo_cache_pocketable\") then\
+    --     400% by default. Not accounting for Havoc\
+    local ammo_crate_restore_percentage = 400\
+    local players_real_low = 0\
+    local players_half_ammo = 0\
+    -- Check each team member to find total missing ammo\
+    for i = 1, #team_members do\
+        local player = team_members[i]\
+        -- If alive, not bot, and uses ammo, add missing ammo to tracker\
+        if player and (player.state and player.state.alive and (player.state.bot == 0)) and (player.equipment and player.ranged_uses_ammo and player.ranged_uses_ammo ~= 0) then\
+           if (player.ammo_reserve_percent < 50) then\
+              players_half_ammo = players_half_ammo + 1\
+              if (player.ammo_reserve_percent < 20) then\
+                  players_real_low = players_real_low + 1\
+              end\
+           end\
+        end\
+    end\
+    -- Show if missing enough ammo\
+    if (players_half_ammo >= 3) or (players_real_low >= 2) then\
+        return true\
+    end\
+end\
+\
+visible = false",
 						conditions = {
 							rows = {
 								{
@@ -684,16 +1025,16 @@ return {
 							},
 						},
 						field = "pocketables.held",
-						kind = "source",
+						kind = "code",
 						source = "player_1",
 					},
 				},
 			},
-			id = "pocketable",
-			label = "Pocketable",
+			id = "deployable_if_team_is_low",
+			label = "Deployable (If Team is Low)",
 			offset = {
-				-138,
-				200,
+				-128,
+				217,
 			},
 			style = {
 				color = {
@@ -703,10 +1044,9 @@ return {
 					255,
 				},
 				size = {
-					38,
-					38,
+					27,
+					27,
 				},
-				visible = false,
 			},
 			type = "rect",
 			values = {},
@@ -714,12 +1054,46 @@ return {
 		{
 			callbacks = {
 				value = {
+					color = {
+						field = "stimms.held_color",
+						kind = "source",
+						source = "player_1",
+					},
 					material = {
-						field = "stimms.icon",
+						field = "stimms.icon_small",
 						kind = "source",
 						source = "player_1",
 					},
 					visible = {
+						body = "-- Hotkey Override On Demand\
+local held_hotkey = sources.keys and sources.keys.t and sources.keys.t.held\
+if (held_hotkey and held_hotkey ~= 0) then return true end\
+\
+-- Checks if Player has Stimm\
+local player_alive = sources.player_1 and sources.player_1.state and sources.player_1.state.alive\
+local player_has_stimm = player_alive and sources.player_1 and sources.player_1.stimms and sources.player_1.stimms.held\
+\
+-- This player has heal stimm and any teammate is on their last wound\
+local player_has_heal_stimm = player_has_stimm and (sources.player_1.stimms.id == \"syringe_corruption_pocketable\")\
+if (player_has_heal_stimm) then\
+    local ally_is_last_wound = false\
+    local teammates = {sources.player_1, sources.player_2, sources.player_3, sources.player_4}\
+    local ally_iterator = 1\
+    while (not ally_is_last_wound) and (ally_iterator < #teammates) do\
+        local current_ally = teammates[ally_iterator]\
+        if (current_ally and current_ally.state and current_ally.state.alive) and\
+                (current_ally and current_ally.state and current_ally.state.bot) and\
+                (current_ally and current_ally.status and current_ally.status.wounds) then\
+            -- If ally is on 1 wound\
+            if (tonumber(current_ally.status.wounds) == 1) then\
+              return true\
+            end\
+        end\
+        ally_iterator = ally_iterator + 1\
+    end\
+end\
+\
+visible = false",
 						conditions = {
 							rows = {
 								{
@@ -734,16 +1108,16 @@ return {
 							},
 						},
 						field = "stimms.held",
-						kind = "source",
+						kind = "code",
 						source = "player_1",
 					},
 				},
 			},
-			id = "drugs",
-			label = "Drugs",
+			id = "stimm_icon_appear_if_ally_on_last_wound",
+			label = "Stimm Icon (Appear if Ally on Last Wound)",
 			offset = {
-				-175,
-				200,
+				-128,
+				189,
 			},
 			style = {
 				color = {
@@ -753,10 +1127,9 @@ return {
 					255,
 				},
 				size = {
-					38,
-					38,
+					27,
+					27,
 				},
-				visible = false,
 			},
 			type = "rect",
 			values = {},
@@ -897,6 +1270,7 @@ return {
 					15,
 				},
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.20000000000000001,
 				},
 			},
