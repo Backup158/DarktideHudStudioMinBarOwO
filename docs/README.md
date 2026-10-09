@@ -9,6 +9,16 @@ Just installing this won't change anything; this is just a resource for you to u
 
 ![player hud with most](./assets/images/owo_hud_show_all.png)
 
+Now I will yap about design. Skip to the next headings if you want.
+
+I am a big fan of contextual HUDs with minimal intrusion, and I generally will prioritize immersion over small gameplay benefits. However, there's a tricky balance between having the information you need and having too many things on the screen too often, and this balance can shift depending on experience and rustiness (e.g. Knowing roughly how much stamina drains, but being less precise with this after a long break). Anyways, that balance can be tipped by a lot of information that's good to know, but not all the time. One thing that annoyed me in Space Marine 2 was having the health bar on the screen. If it was always off, knowing when to stimm harder to nail down, but if it was always on, it's annoyingly sitting there, taunting me! The contextual display helped, but that specific case would show it any time you were in combat, even if at full health, and I *really* dislike how large it is.
+
+So if I'm not satisfied with Space Marine 2's HUD, what do I like? Tactical shooters. Well, not strictly tactical, but generally shooters leaning towards grounded realism. Simple colors. Contrast to be noticeable when needed. Hiding elements when they're not important, but reappearing in context. A hotkey to show additional information. That's the vibe I like, especially the hotkey. 
+
+Let's look at healthbars. I only need to know my health when I'm taking damage or if I'm dangerously low, and even that last part is debatable since I'd know with the first part. But only appearing on context isn't great either. What if I fought for like 10 minutes before this downtime, and I have a heal. Do I use it now? I remember being low, but was I healed without noticing? What if I just misremembered? Use the hotkey to show more and boom, problem solved. It's also as if your character is taking this time to check up on all their equipment, represented by the HUD appearing.
+
+And shoutout to Ring HUD. Great mod. I'd still be using it if I liked... rings...
+
 # Installation
 I assume you know how to install mods. If not, here's the [guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
 1. Install [HUD Studio](https://www.nexusmods.com/warhammer40kdarktide/mods/1263)
@@ -29,9 +39,11 @@ Elements marked [ODO] only appear when using the hotkey.
 ### Player Panel
 - Toughness and Toughness text
     - Appears at < 30%
-- Health and Health text
-    - Appears when changed then fades
-    - Appears at < 30%
+    - Toughness bar is blue, and it turns yellow when over 100% (with a more faded yellow from 100%-110%)
+    - When toughness is broken, the bar background turns deep red
+- Health, Health text, and Corruption
+    - Appears when changed, then fades
+    - Appears at < 30% Health
 - Stamina
     - Appears at < 30%
 - Ability charge progress
@@ -40,6 +52,10 @@ Elements marked [ODO] only appear when using the hotkey.
     - Bar that fades in with intensity
     - It goes from faded out pink to hot pink
     - Not in the pictures because it's fully transparent at 0%, but it's below the stamina bar
+- Stimm
+    - Appears if it's a med stimm and someone on the team is at 1 wound
+    - Color appears based on what you have
+    - Hive Scumm have to check OD. The audio cue is enough for me.
 
 ![player panel ammo psyker](./assets/images/owo_hud_player_ammo_psyker.png)
 
@@ -102,11 +118,13 @@ These appear on hotkey and inspecting the relevant weapon. All of these show val
     - Same as above
     - Also appears when holding the load special ammo button while the ranged weapon is out
 - Magazine icons
-    - Changes color at 50% capacity and 100%
-    - Also appears when holding reload while the ranged weapon is out
+    - Color shows how low you are.
+        - [100%, 51%] is white
+        - [50%, 26%] is orange
+        - [25%, 1%] is red
 - Total ammo icons
-    - Same as above
-    - When at >= 85% ammo, the icon turns green to represent not needing to pick up a small ammo (does not change based on Havoc so you'll have to figure that one out yourself)
+    - Same colors as above, but when at >= 85% ammo, the icon turns green to represent not needing to pick up a small ammo (does not change based on Havoc so you'll have to figure that one out yourself)
+    - Also appears when holding reload while the ranged weapon is out
 - Melee Special
     - No additional conditions
 
