@@ -5,7 +5,6 @@ return {
 		1920,
 		1080,
 	},
-	export_mod = "hud_studio_owo",
 	gamemodes = {
 		meatgrinder = true,
 		mission = true,
@@ -13,7 +12,9 @@ return {
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Ally Icons",
+	library_label = "OwO Ally Icons",
 	localizations = {},
+	member_id = "owo_ally_icons",
 	mod_version = 4,
 	name = "owo_ally_icons",
 	nodes = {
@@ -92,80 +93,6 @@ elseif (deployable_id == \"ammo_cache_pocketable\") then\
 end\
 \
 visible = false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "pocketables.held",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "changed",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "state.disabled",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "state.alive",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "changed",
-								},
-								{
-									join = "or",
-									lhs = {
-										kind = "fixed",
-									},
-									op = "==",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "pocketables.deployable_is_held",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ammo_reserve_percent",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "==",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -227,9 +154,7 @@ if RecolorStimms then\
     color = custom_stimm_color or vanilla_stimm_color\
 end\
 ",
-						field = "stimms.held_color",
 						kind = "code",
-						source = "player_2",
 					},
 					material = {
 						field = "stimms.icon_small",
@@ -271,54 +196,7 @@ if (player_has_heal_stimm) then\
 end\
 \
 visible = false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "state.alive",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "status.wounds",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "==",
-									rhs = {
-										kind = "fixed",
-										value = 1,
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "stimms.held",
-										kind = "source",
-										source = "player_2",
-										value = "false",
-									},
-									op = "false",
-								},
-							},
-						},
-						field = "ability.held",
 						kind = "code",
-						source = "actions",
 					},
 				},
 			},
@@ -354,29 +232,6 @@ visible = false",
 				value = {
 					color = {
 						kind = "fixed",
-						thresholds = {
-							current = {
-								kind = "fixed",
-								value = 0,
-							},
-							list = {
-								{
-									color = {
-										255,
-										120,
-										220,
-										255,
-									},
-									pct = 0,
-								},
-							},
-							max = {
-								kind = "fixed",
-								value = 100,
-							},
-							payload = "color",
-							scale = "percent",
-						},
 					},
 					material = {
 						field = "ability.icon",
@@ -419,7 +274,6 @@ visible = false",
 						},
 					},
 					visible = {
-						body = "",
 						conditions = {
 							rows = {
 								{
@@ -569,7 +423,6 @@ visible = false",
 						},
 					},
 					visible = {
-						body = "",
 						conditions = {
 							rows = {
 								{
@@ -646,9 +499,7 @@ visible = false",
 						source = "player_2",
 					},
 					text2 = {
-						field = "ability.name",
 						kind = "fixed",
-						source = "player_2",
 					},
 					text3 = {
 						field = "blitz.max_count",
@@ -776,9 +627,7 @@ else\
     material = \"content/ui/materials/hud/interactions/icons/grenade\"\
 end\
 ",
-						field = "blitz.icon",
 						kind = "code",
-						source = "player_2",
 					},
 					visible = {
 						conditions = {
@@ -1067,9 +916,7 @@ end\
 			callbacks = {
 				value = {
 					color = {
-						field = "identity.slot_color",
 						kind = "thresholds",
-						source = "player_2",
 						thresholds = {
 							current = {
 								field = "status.toughness_percent",
@@ -1164,28 +1011,6 @@ end\
 					},
 					opacity = {
 						kind = "fixed",
-						thresholds = {
-							current = {
-								kind = "fixed",
-								value = 0,
-							},
-							list = {
-								{
-									number = 0,
-									pct = 0,
-								},
-								{
-									number = 1,
-									pct = 1,
-								},
-							},
-							max = {
-								kind = "fixed",
-								value = 100,
-							},
-							payload = "number",
-							scale = "percent",
-						},
 					},
 					visible = {
 						conditions = {
@@ -1201,9 +1026,7 @@ end\
 								},
 							},
 						},
-						field = "ability.is_active",
 						kind = "conditions",
-						source = "player_2",
 					},
 				},
 			},
@@ -1235,24 +1058,6 @@ end\
 				value = {
 					opacity = {
 						kind = "fixed",
-						thresholds = {
-							current = {
-								kind = "fixed",
-								value = 0,
-							},
-							list = {
-								{
-									number = 1,
-									pct = 0,
-								},
-							},
-							max = {
-								kind = "fixed",
-								value = 100,
-							},
-							payload = "number",
-							scale = "percent",
-						},
 					},
 					visible = {
 						conditions = {
@@ -1281,9 +1086,7 @@ end\
 								},
 							},
 						},
-						field = "status.toughness_broken",
 						kind = "conditions",
-						source = "player_2",
 					},
 				},
 			},
@@ -1396,6 +1199,15 @@ end\
 									},
 									pct = 0,
 								},
+								{
+									color = {
+										255,
+										255,
+										139,
+										188,
+									},
+									pct = 0,
+								},
 							},
 							mirror = {
 								current = "current",
@@ -1411,9 +1223,7 @@ end\
 						source = "player_2",
 					},
 					max = {
-						field = "ability.active_progress_percent",
 						kind = "fixed",
-						source = "player_2",
 					},
 					segments = {
 						field = "status.wounds_max",
@@ -1537,9 +1347,7 @@ end\
 			callbacks = {
 				value = {
 					color = {
-						field = "identity.slot_color",
 						kind = "thresholds",
-						source = "player_2",
 						thresholds = {
 							current = {
 								field = "status.health_percent",
@@ -1673,6 +1481,19 @@ end\
 									},
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "status.corruption_percent",
+										kind = "source",
+										source = "player_2",
+									},
+									op = ">=",
+									rhs = {
+										kind = "fixed",
+										value = 50,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "status.wounds",
@@ -1732,9 +1553,7 @@ end\
 						source = "player_2",
 					},
 					text2 = {
-						field = "profile.name",
 						kind = "fixed",
-						source = "player_2",
 					},
 					text3 = {
 						field = "profile.name",
@@ -1839,8 +1658,8 @@ end\
 					},
 				},
 			},
-			id = "player_name_detail",
-			label = "Player Name Detail",
+			id = "player_name",
+			label = "Player Name",
 			offset = {
 				-1587,
 				238,
@@ -1854,6 +1673,10 @@ end\
 					5,
 				},
 				shadow = true,
+				size = {
+					205,
+					25,
+				},
 			},
 			type = "text",
 			values = {
@@ -1870,10 +1693,61 @@ end\
 		{
 			callbacks = {
 				value = {
-					material = {
-						field = "ability.icon",
-						kind = "fixed",
+					text = {
+						field = "profile.account_name",
+						kind = "source",
 						source = "player_2",
+					},
+					visible = {
+						conditions = {
+							rows = {
+								{
+									join = "and",
+									lhs = {
+										field = "t.held",
+										kind = "source",
+										source = "keys",
+									},
+									op = "true",
+								},
+							},
+						},
+						kind = "conditions",
+					},
+				},
+			},
+			id = "player_account_name_detail",
+			label = "Player Account Name Detail",
+			offset = {
+				-1585,
+				225,
+			},
+			style = {
+				align = "top_center",
+				color = {
+					255,
+					225,
+					220,
+					190,
+				},
+				font_size = 16,
+				shadow = true,
+				size = {
+					205,
+					15,
+				},
+			},
+			type = "text",
+			values = {
+				mode = "fixed",
+				text = "Text",
+			},
+		},
+		{
+			callbacks = {
+				value = {
+					material = {
+						kind = "fixed",
 					},
 					visible = {
 						conditions = {
@@ -1919,8 +1793,8 @@ end\
 		},
 	},
 	offset = {
-		337,
-		36,
+		7,
+		120,
 	},
 	opacity = {
 		kind = "fixed",
@@ -1937,7 +1811,7 @@ end\
 	transition = {
 		fade_out = 0.25,
 	},
-	version = 2,
+	version = 4,
 	visible = {
 		conditions = {
 			rows = {

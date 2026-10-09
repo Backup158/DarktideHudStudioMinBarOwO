@@ -212,7 +212,7 @@ Appears if alive and not a bot
         - I keep level since it's easier to remember "the level 500 Psyker and level 30 Psyker" as opposed to "Melisande Psyker and Dickot Psyker" 
     - [ODO] Account name
 - Health Icon
-    - Appears on change, needs help, or < 100 hp
+    - Appears on change, needs help, or < 100 hp while corruption >= 50%
         - The health threshold is around when Poxbursters and Snipers lethal in normal matches
         - When downed, icon appears but at low opacity
     - Color-coded like the player panel
