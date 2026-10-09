@@ -1,3 +1,31 @@
+# 1.3.0 - 2026-10-09
+## New
+- Ally Panel
+    - [ODO] Account name is now available without State Your Name
+- Player Panel
+    - Added missing corruption bar...
+    - Stim and Pocketable are enabled now
+        - Using conditions from Ally Panel
+        - (Description will describe it here first)
+        - Resized to stack next to ability
+    - Toughness bar background color turns red when breaking
+## Change
+- Player Panel
+    - Reduced default opacity of Stamina color
+        - Background is the same
+        - I had it like this before I made this HUD so I'm comfortable with it
+    - Toughness color is now a gradient
+        - Normal is normal
+        - Yellow above 100%, 100%-110% is not as yellow
+- Blitz Bar
+    - Last charges only appear on wield/inspect if the max count is > 1
+        - If there's only 1, I don't need a number to know the one in my hand is the one
+        - Wow!
+    - Good fight!
+## Fix
+- Player Panel
+    - Add 0.3s delay to bars that appear on change
+
 # 1.2.2 - 2026-10-08
 ## Changed
 - Ally Panel
