@@ -2,6 +2,7 @@
 ## New
 - Ally Panel
     - [ODO] Account name is now available without State Your Name
+    - Names use player slot color
 - Player Panel
     - Added missing corruption bar...
     - Stim and Pocketable are enabled now
@@ -22,9 +23,11 @@
         - If there's only 1, I don't need a number to know the one in my hand is the one
         - Wow!
     - Good fight!
-## Fix
-- Player Panel
-    - Add 0.3s delay to bars that appear on change
+- Ally Panel
+    - Default status icon is an exclamation point instead of helping
+    - Name appears with health and toughness
+    - Stimm now fades out quickly instead of disappearing immediately
+    - Blitz icon is yellow until it's empty, where it's red (but not the deep red)
 
 # 1.2.2 - 2026-10-08
 ## Changed

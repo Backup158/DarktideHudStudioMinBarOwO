@@ -14,7 +14,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Ally Icons",
 	localizations = {},
-	mod_version = 3,
+	mod_version = 4,
 	name = "owo_ally_icons",
 	nodes = {
 		{
@@ -189,8 +189,8 @@ visible = false",
 					30,
 				},
 				transition = {
-					fade_out = 0.29999999999999999,
-					linger = 0.40000000000000002,
+					fade_out = 0.20000000000000001,
+					linger = 0.5,
 				},
 			},
 			type = "rect",
@@ -315,6 +315,9 @@ visible = false",
 				size = {
 					30,
 					30,
+				},
+				transition = {
+					fade_out = 0.20000000000000001,
 				},
 			},
 			type = "rect",
@@ -451,7 +454,8 @@ visible = false",
 					40,
 				},
 				transition = {
-					fade_out = 0.29999999999999999,
+					fade_out = 0.20000000000000001,
+					linger = 0.10000000000000001,
 				},
 			},
 			type = "rect",
@@ -702,28 +706,28 @@ visible = false",
 							list = {
 								{
 									color = {
-										141,
-										114,
-										0,
-										0,
+										255,
+										172,
+										40,
+										40,
 									},
 									pct = 0,
 								},
 								{
 									color = {
-										86,
-										114,
-										0,
-										0,
+										255,
+										214,
+										214,
+										73,
 									},
 									pct = 1,
 								},
 								{
 									color = {
-										120,
 										255,
+										248,
 										255,
-										255,
+										15,
 									},
 									pct = 2,
 								},
@@ -831,6 +835,7 @@ end\
 					25,
 				},
 				transition = {
+					delay = 0.29999999999999999,
 					fade_out = 0.20000000000000001,
 				},
 			},
@@ -1026,7 +1031,8 @@ end\
 					35,
 				},
 				transition = {
-					fade_out = 0.29999999999999999,
+					fade_out = 0.20000000000000001,
+					linger = 0.10000000000000001,
 				},
 			},
 			type = "rect",
@@ -1231,15 +1237,6 @@ end\
 								{
 									join = "and",
 									lhs = {
-										field = "state.alive",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
 										field = "state.downed",
 										kind = "source",
 										source = "player_2",
@@ -1285,7 +1282,8 @@ end\
 					45,
 				},
 				transition = {
-					fade_out = 0.29999999999999999,
+					fade_out = 0.20000000000000001,
+					linger = 0.10000000000000001,
 				},
 			},
 			type = "rect",
@@ -1688,8 +1686,8 @@ end\
 					50,
 				},
 				transition = {
-					fade_out = 0.29999999999999999,
-					linger = 0.40000000000000002,
+					fade_out = 0.20000000000000001,
+					linger = 0.5,
 				},
 			},
 			type = "rect",
@@ -1700,6 +1698,11 @@ end\
 		{
 			callbacks = {
 				value = {
+					color = {
+						field = "identity.slot_color",
+						kind = "source",
+						source = "player_2",
+					},
 					text = {
 						field = "identity.text_icon",
 						kind = "source",
@@ -1735,11 +1738,68 @@ end\
 								{
 									join = "or",
 									lhs = {
+										field = "status.health_percent",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "changed",
+								},
+								{
+									join = "or",
+									lhs = {
 										field = "state.requires_help",
 										kind = "source",
 										source = "player_2",
 									},
 									op = "true",
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.health",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 100,
+									},
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.wounds",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "==",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+								{
+									join = "or",
+									lhs = {
+										field = "status.toughness",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "<",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "state.downed",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "false",
 								},
 								{
 									join = "or",
@@ -1787,6 +1847,11 @@ end\
 		{
 			callbacks = {
 				value = {
+					material = {
+						field = "ability.icon",
+						kind = "fixed",
+						source = "player_1",
+					},
 					visible = {
 						conditions = {
 							rows = {
@@ -1814,9 +1879,9 @@ end\
 			style = {
 				color = {
 					255,
-					255,
-					255,
-					255,
+					114,
+					0,
+					0,
 				},
 				size = {
 					75,
@@ -1826,7 +1891,7 @@ end\
 			},
 			type = "rect",
 			values = {
-				material = "content/ui/materials/hud/interactions/icons/help",
+				material = "content/ui/materials/icons/player_states/incapacitated",
 			},
 		},
 	},
