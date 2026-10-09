@@ -1,241 +1,4 @@
 return {
-	deleted_nodes = {
-		{
-			callbacks = {
-				value = {
-					opacity = {
-						kind = "fixed",
-						thresholds = {
-							current = {
-								kind = "fixed",
-								value = 0,
-							},
-							list = {
-								{
-									number = 1,
-									pct = 0,
-								},
-							},
-							max = {
-								kind = "fixed",
-								value = 100,
-							},
-							payload = "number",
-							scale = "percent",
-						},
-					},
-					visible = {
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "state.alive",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "state.downed",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "false",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "status.toughness",
-										kind = "source",
-										source = "player_2",
-									},
-									op = "<",
-									rhs = {
-										kind = "fixed",
-										value = 1,
-									},
-								},
-							},
-						},
-						field = "status.toughness_broken",
-						kind = "conditions",
-						source = "player_2",
-					},
-				},
-			},
-			id = "toughness_broken_icon_copy",
-			label = "Toughness Broken Icon",
-			offset = {
-				104,
-				187,
-			},
-			style = {
-				color = {
-					255,
-					114,
-					0,
-					0,
-				},
-				size = {
-					15,
-					15,
-				},
-				transition = {
-					fade_out = 0.29999999999999999,
-				},
-			},
-			type = "rect",
-			values = {
-				material = "content/ui/materials/hud/interactions/icons/void_shield",
-			},
-		},
-		{
-			callbacks = {
-				value = {
-					color = {
-						kind = "thresholds",
-						thresholds = {
-							current = {
-								kind = "fixed",
-								value = 0,
-							},
-							list = {
-								{
-									color = {
-										255,
-										255,
-										255,
-										255,
-									},
-									pct = 0,
-								},
-								{
-									color = {
-										255,
-										214,
-										178,
-										240,
-									},
-									pct = 50,
-								},
-								{
-									color = {
-										255,
-										142,
-										19,
-										255,
-									},
-									pct = 80,
-								},
-								{
-									color = {
-										255,
-										85,
-										16,
-										121,
-									},
-									pct = 97,
-								},
-								{
-									color = {
-										255,
-										0,
-										0,
-										0,
-									},
-									pct = 100,
-								},
-							},
-							max = {
-								kind = "fixed",
-								value = 100,
-							},
-							payload = "color",
-							scale = "percent",
-						},
-					},
-					material = {
-						body = "",
-						field = "profile.portrait_frame",
-						kind = "fixed",
-						source = "player_1",
-					},
-					visible = {
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "identity.archetype",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "==",
-									rhs = {
-										kind = "fixed",
-										value = "Psyker",
-									},
-								},
-							},
-						},
-						field = "ability.held",
-						kind = "conditions",
-						source = "actions",
-					},
-				},
-			},
-			id = "peril",
-			label = "Peril",
-			offset = {
-				-78,
-				123,
-			},
-			style = {
-				color = {
-					255,
-					127,
-					0,
-					194,
-				},
-				size = {
-					200,
-					18,
-				},
-				visible = false,
-			},
-			type = "rect",
-			values = {},
-		},
-		{
-			callbacks = {
-				value = {
-					text = {
-						field = "blitz.count",
-						kind = "source",
-						source = "player_1",
-					},
-				},
-			},
-			id = "text_1",
-			offset = {
-				137,
-				199,
-			},
-			style = {
-				font_size = 30,
-				font_type = "proxima_nova_bold",
-				shadow = true,
-			},
-			type = "text",
-			values = {
-				mode = "fixed",
-				text = "Text",
-			},
-		},
-	},
 	design_aspect = 1.7777777777777777,
 	design_hud_scale = 0.59999999999999998,
 	design_resolution = {
@@ -332,7 +95,6 @@ return {
 					15,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -421,7 +183,6 @@ return {
 					15,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -504,7 +265,6 @@ return {
 				font_size = 16,
 				shadow = true,
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -675,7 +435,6 @@ return {
 					15,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -755,7 +514,6 @@ return {
 				font_size = 16,
 				shadow = true,
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -842,7 +600,6 @@ return {
 					15,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_in = 0.20000000000000001,
 					fade_out = 0.20000000000000001,
 				},
@@ -936,7 +693,6 @@ return {
 					55,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.40000000000000002,
 				},
 			},
@@ -1270,7 +1026,6 @@ visible = false",
 					15,
 				},
 				transition = {
-					delay = 0.29999999999999999,
 					fade_out = 0.20000000000000001,
 				},
 			},
