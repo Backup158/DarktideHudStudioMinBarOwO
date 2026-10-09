@@ -183,8 +183,21 @@ Peril from here and in the Player Panel bar:
 ### Ally Panel Icons
 Appears if alive and not a bot
 
-- Class icon, character name, and True Level
-    - Appears when needs help or OD
+- Player Status Needs Help
+    - Net, dog, etc.
+    - Just a generic exclamation point icon. Disabled by default. I recommend using the blocks from [Player State Indicators](https://www.nexusmods.com/warhammer40kdarktide/mods/635) instead
+- Player Identification
+    - Class icon, character name, and True Level
+        - Appears
+            - OD
+            - Player needs help
+            - Same conditions as health
+            - Toughness breaks
+            - Player dies
+        - At a glance, this makes it easier to know who the immediate danger applies to
+        - Just the position besides text makes it hard to notice differences
+        - I keep level since it's easier to remember "the level 500 Psyker and level 30 Psyker" as opposed to "Melisande Psyker and Dickot Psyker" 
+    - [ODO] Account name
 - Health Icon
     - Appears on change, needs help, or < 100 hp
         - The health threshold is around when Poxbursters and Snipers lethal in normal matches
@@ -206,11 +219,12 @@ Appears if alive and not a bot
 - Blitz used
     - If has charges and just used (when < 2 charges), appear and linger
     - Uses a lightning bolt icon if it recharges, grenade icon otherwise.
+    - Yellow normally, darker yellow when at 1, and dark red at 0
     - [ODO] Numerical count/max
 - Ability Icon
     - Fades in when charging, appearing at 80%, and fully shows at 100% before fading out
     - If revealed on demand, you can see it at even lower opacities (eg < 50% is only 25% opaque)
-    - By default this uses the Strike icon, like in the Player Panel Icons, but there's a copy to use the actual icon
+    - By default this uses the actual icon, but there's a copy that uses the Strike icon, like in the Player Panel Icons bar
 - Deployable (crate/ammo)
     - Appears and lingers when picking it up, getting disabled, going down, or dying
         - Disabled/down gives more info for who to help
@@ -230,8 +244,5 @@ Appears if alive and not a bot
         - Death is debatable but I like knowing if we just lost something
     - Color-coded based on what it is
     - If med stimm, show if someone on the team is on the last wound
-- Player Status Needs Help
-    - Net, dog, etc.
-    - Just a generic hand icon. Disabled by default. I recommend using the blocks from [Player State Indicators](https://www.nexusmods.com/warhammer40kdarktide/mods/635) instead
 
 ![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
