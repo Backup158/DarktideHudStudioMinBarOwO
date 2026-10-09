@@ -115,16 +115,18 @@ From left to right, top to bottom:
 ### Ammo
 These appear on hotkey and inspecting the relevant weapon. All of these show value by color-coding.
 - Special Ammo
-    - Same as above
-    - Also appears when holding the load special ammo button while the ranged weapon is out
+    - Appears when holding the load special ammo button while the ranged weapon is out
 - Magazine icons
-    - Color shows how low you are.
+    - Appears when holding reload while the ranged weapon is out
+    - Color
         - [100%, 51%] is white
         - [50%, 26%] is orange
-        - [25%, 1%] is red
+        - [25%, 0%] is red
+        - 0% also makes the whole thing darken
+    - Normally, you don't need to know magazine while reloading, but there are round reload weapons
 - Total ammo icons
     - Same colors as above, but when at >= 85% ammo, the icon turns green to represent not needing to pick up a small ammo (does not change based on Havoc so you'll have to figure that one out yourself)
-    - Also appears when holding reload while the ranged weapon is out
+    - For general use, this is easier if it just appears while reloading, but most of the time I know roughly what my reserve is, and the feeling of holding reload to check feels cool
 - Melee Special
     - No additional conditions
 

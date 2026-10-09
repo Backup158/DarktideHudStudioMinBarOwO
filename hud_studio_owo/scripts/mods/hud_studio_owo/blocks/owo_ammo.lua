@@ -110,7 +110,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Ammo",
 	localizations = {},
-	mod_version = 2,
+	mod_version = 3,
 	name = "owo_ammo",
 	nodes = {
 		{
@@ -474,6 +474,43 @@ return {
 		{
 			callbacks = {
 				value = {
+					color = {
+						kind = "thresholds",
+						thresholds = {
+							current = {
+								field = "equipment.ammo_reserve_percent",
+								kind = "source",
+								source = "player_1",
+								value = 0,
+							},
+							list = {
+								{
+									color = {
+										255,
+										0,
+										0,
+										0,
+									},
+									pct = 0,
+								},
+								{
+									color = {
+										255,
+										255,
+										255,
+										255,
+									},
+									pct = 1,
+								},
+							},
+							max = {
+								kind = "fixed",
+								value = 100,
+							},
+							payload = "color",
+							scale = "percent",
+						},
+					},
 					visible = {
 						body = "-- Generated from the Condition Builder.\
 local ranged_uses_ammo = sources.player_1 and sources.player_1.equipment and sources.player_1.equipment.ranged_uses_ammo\
@@ -621,7 +658,7 @@ visible = (\
 										8,
 										8,
 									},
-									pct = 0,
+									pct = 1,
 								},
 								{
 									color = {
@@ -649,6 +686,15 @@ visible = (\
 										186,
 									},
 									pct = 85,
+								},
+								{
+									color = {
+										255,
+										114,
+										0,
+										0,
+									},
+									pct = 0,
 								},
 							},
 							max = {
@@ -787,6 +833,43 @@ visible = (\
 		{
 			callbacks = {
 				value = {
+					color = {
+						kind = "thresholds",
+						thresholds = {
+							current = {
+								field = "equipment.ammo_mag_remaining_percent",
+								kind = "source",
+								source = "player_1",
+								value = 0,
+							},
+							list = {
+								{
+									color = {
+										255,
+										255,
+										255,
+										255,
+									},
+									pct = 1,
+								},
+								{
+									color = {
+										255,
+										0,
+										0,
+										0,
+									},
+									pct = 0,
+								},
+							},
+							max = {
+								kind = "fixed",
+								value = 100,
+							},
+							payload = "color",
+							scale = "percent",
+						},
+					},
 					material = {
 						field = "ability.icon",
 						kind = "fixed",
@@ -941,7 +1024,7 @@ visible = (\
 										8,
 										8,
 									},
-									pct = 0,
+									pct = 1,
 								},
 								{
 									color = {
@@ -960,6 +1043,15 @@ visible = (\
 										255,
 									},
 									pct = 50,
+								},
+								{
+									color = {
+										255,
+										114,
+										0,
+										0,
+									},
+									pct = 0,
 								},
 							},
 							max = {
@@ -1636,6 +1728,7 @@ visible = (\
 		kind = "fixed",
 		value = 0.5,
 	},
+	save_name = "owo_ammo",
 	scale_anchor = "center",
 	screen_anchor = "bottom",
 	summary = "Ammo: mag, reserve, and special. Immersive displays appear on hold (T, inspect weapon, or reload) and use colors to represent amount of ammo. Immersive special ammo also has loading special ammo as a hotkey.  Numeric displays (disabled by default) show numbers on press and on wield while <33% ammo.",

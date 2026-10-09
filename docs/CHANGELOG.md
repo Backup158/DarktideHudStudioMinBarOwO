@@ -23,6 +23,8 @@
         - If there's only 1, I don't need a number to know the one in my hand is the one
         - Wow!
     - Good fight!
+- Ammo
+    - Darkens at 0%
 - Ally Panel
     - Default status icon is an exclamation point instead of helping
     - Name appears with health and toughness
