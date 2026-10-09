@@ -56,6 +56,17 @@ Elements marked [ODO] only appear when using the hotkey.
     - Appears if it's a med stimm and someone on the team is at 1 wound
     - Color appears based on what you have
     - Hive Scumm have to check OD. The audio cue is enough for me.
+- Pocketable
+    - Appears when team is low on the appropriate resource
+    - Medical Crate: Show if team health is low 
+        - Low means missing 500 hitpoints, because that's the capacity of a Medical Crate
+        - This does not account for clearing corruption when a Veteran is alive with Field Improvisation
+    - Ammo Cache: Show if team ammo is low.
+        - If >= 3 team members have < 50% ammo.
+        - If >= 2 team members have < 20% ammo.
+        - I hard-coded these thresholds based on the normal conditions of Ammo crates having 4 uses of 100% reserve restore. 
+        - Havoc players can suffer because isn't that what you want???
+        - lol just kidding, you can open the code and edit those thresholds if you'd rather have it earlier/later.
 
 ![player panel ammo psyker](./assets/images/owo_hud_player_ammo_psyker.png)
 
@@ -229,20 +240,12 @@ Appears if alive and not a bot
     - Appears and lingers when picking it up, getting disabled, going down, or dying
         - Disabled/down gives more info for who to help
         - Death is debatable but I like knowing if we just lost something
-    - Medical Crate: Show if team health is low 
-        - Low means missing 500 hitpoints, because that's the capacity of a Medical Crate
-        - This does not account for clearing corruption when a Veteran is alive with Field Improvisation
-    - Ammo Cache: Show if team ammo is low.
-        - If >= 3 team members have < 50% ammo.
-        - If >= 2 team members have < 20% ammo.
-        - I hard-coded these thresholds based on the normal conditions of Ammo crates having 4 uses of 100% reserve restore. 
-        - Havoc players can suffer because isn't that what you want???
-        - lol just kidding, you can open the code and edit those thresholds if you'd rather have it earlier/later.
+    - Appears and stays while team is low (see specifics in Player Panel)
 - Stimm
     - Appears and lingers on pickup, getting disabled, going down, or dying
         - Disabled/down gives more info for who to help
         - Death is debatable but I like knowing if we just lost something
-    - Color-coded based on what it is
-    - If med stimm, show if someone on the team is on the last wound
+    - Appears and stays while team is low (see specifics in Player Panel)
+    - Color-coded based on which stimm it is
 
 ![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
