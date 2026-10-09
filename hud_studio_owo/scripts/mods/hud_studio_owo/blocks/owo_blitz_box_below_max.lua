@@ -10,6 +10,7 @@ return {
 	grid_rows = 0,
 	label = "OwO Blitz Box (Below Max)",
 	localizations = {},
+	mod_version = 2,
 	name = "owo_blitz_box_below_max",
 	nodes = {
 		{
@@ -344,6 +345,19 @@ return {
 									},
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "blitz.max_count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = ">",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "t.held",
@@ -388,6 +402,19 @@ return {
 										value = "charges",
 									},
 									op = "true",
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.max_count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = ">",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
 								},
 							},
 						},
@@ -465,6 +492,19 @@ return {
 									},
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "blitz.max_count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = ">",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "t.held",
@@ -510,6 +550,19 @@ return {
 									},
 									op = "true",
 								},
+								{
+									join = "and",
+									lhs = {
+										field = "blitz.max_count",
+										kind = "source",
+										source = "player_1",
+									},
+									op = ">",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
 							},
 						},
 						field = "ability.is_ready",
@@ -546,6 +599,7 @@ return {
 		kind = "fixed",
 		value = 0.67000000000000004,
 	},
+	save_name = "owo_blitz_box_below_max",
 	scale_anchor = "center",
 	screen_anchor = "bottom",
 	summary = "Show blitz count when last is in hand. Show all on hotkey and inspect. Progress does not include talents because go die.",
