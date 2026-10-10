@@ -5,10 +5,14 @@ return {
 		1920,
 		1080,
 	},
-	export_mod = "hud_studio_owo",
+	gamemodes = {
+		meatgrinder = true,
+		mission = true,
+	},
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Blitz Box (Below Max)",
+	library_label = "OwO Blitz Box (Below Max)",
 	localizations = {},
 	mod_version = 2,
 	name = "owo_blitz_box_below_max",
@@ -22,7 +26,6 @@ return {
 						source = "player_1",
 					},
 					size = {
-						body = "",
 						kind = "fixed",
 					},
 					visible = {
@@ -338,9 +341,7 @@ return {
 									},
 									op = "==",
 									rhs = {
-										field = "blitz.max_count",
 										kind = "fixed",
-										source = "player_1",
 										value = 1,
 									},
 								},
@@ -485,9 +486,7 @@ return {
 									},
 									op = "==",
 									rhs = {
-										field = "blitz.max_count",
 										kind = "fixed",
-										source = "player_1",
 										value = 1,
 									},
 								},
@@ -565,9 +564,7 @@ return {
 								},
 							},
 						},
-						field = "ability.is_ready",
 						kind = "conditions",
-						source = "player_1",
 					},
 				},
 			},
@@ -609,7 +606,7 @@ return {
 	transition = {
 		fade_out = 0.20000000000000001,
 	},
-	version = 2,
+	version = 4,
 	visible = {
 		conditions = {
 			rows = {
@@ -653,8 +650,6 @@ return {
 				},
 			},
 		},
-		field = "blitz.is_ready",
 		kind = "conditions",
-		source = "player_1",
 	},
 }

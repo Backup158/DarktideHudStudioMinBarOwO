@@ -1,114 +1,18 @@
 return {
-	deleted_nodes = {
-		{
-			callbacks = {
-				value = {
-					visible = {
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-							},
-						},
-						kind = "conditions",
-					},
-				},
-			},
-			id = "rect_1",
-			offset = {
-				-116,
-				564,
-			},
-			style = {
-				color = {
-					255,
-					255,
-					255,
-					255,
-				},
-				size = {
-					36,
-					17,
-				},
-				transition = {
-					fade_in = 0.10000000000000001,
-					fade_out = 0.10000000000000001,
-				},
-			},
-			type = "rect",
-			values = {
-				opacity = 0.5,
-			},
-		},
-		{
-			id = "ammo_in_reserve",
-			label = "Ammo in Reserve",
-			offset = {
-				0,
-				0,
-			},
-			style = {
-				shadow = true,
-			},
-			type = "text",
-			values = {
-				text = "Text",
-				value_mode = "chain",
-			},
-		},
-	},
 	design_aspect = 1.7777777777777777,
 	design_hud_scale = 0.59999999999999998,
 	design_resolution = {
 		1920,
 		1080,
 	},
-	export_mod = "hud_studio_owo",
+	gamemodes = {
+		meatgrinder = true,
+		mission = true,
+	},
 	grid_cols = 0,
 	grid_rows = 0,
 	label = "OwO Ammo",
+	library_label = "OwO Ammo",
 	localizations = {},
 	mod_version = 3,
 	name = "owo_ammo",
@@ -122,7 +26,6 @@ return {
 						source = "player_1",
 					},
 					size = {
-						body = "",
 						kind = "fixed",
 					},
 				},
@@ -158,9 +61,7 @@ return {
 						source = "player_1",
 					},
 					text2 = {
-						field = "ability.name",
 						kind = "fixed",
-						source = "player_1",
 					},
 					text3 = {
 						field = "equipment.ammo_reserve",
@@ -229,9 +130,7 @@ return {
 								},
 							},
 						},
-						field = "ability.held",
 						kind = "conditions",
-						source = "actions",
 					},
 				},
 			},
@@ -287,7 +186,6 @@ return {
 						source = "player_1",
 					},
 					visible = {
-						body = "",
 						conditions = {
 							rows = {
 								{
@@ -388,7 +286,6 @@ return {
 						source = "player_1",
 					},
 					visible = {
-						body = "",
 						conditions = {
 							rows = {
 								{
@@ -531,80 +428,6 @@ visible = (\
         )\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -725,80 +548,6 @@ visible = (\
         )\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -871,9 +620,7 @@ visible = (\
 						},
 					},
 					material = {
-						field = "ability.icon",
 						kind = "fixed",
-						source = "player_1",
 					},
 					visible = {
 						body = "-- Generated from the Condition Builder.\
@@ -895,83 +642,7 @@ visible = (\
         )\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-							},
-						},
-						field = "ability.is_active",
 						kind = "code",
-						source = "player_1",
 					},
 				},
 			},
@@ -1082,98 +753,6 @@ visible = (\
         )\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_is_equipped",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_ammo",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_is_equipped",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -1288,94 +867,6 @@ visible = (\
         ) -- close or\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "special.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -1432,112 +923,6 @@ visible = (\
         ) -- close or\
     )\
 ) and true or false",
-						conditions = {
-							rows = {
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-									rhs = {
-										kind = "fixed",
-										value = "true",
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "t.held",
-										kind = "source",
-										source = "keys",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "inspect.held",
-										kind = "source",
-										source = "actions",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "reload.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_is_equipped",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "or",
-									lhs = {
-										field = "equipment.ranged_uses_special_charges",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "special.held_seconds",
-										kind = "source",
-										source = "actions",
-									},
-									op = ">",
-									rhs = {
-										kind = "fixed",
-										value = 0.20000000000000001,
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "equipment.ranged_is_equipped",
-										kind = "source",
-										source = "player_1",
-									},
-									op = "true",
-								},
-							},
-						},
 						kind = "code",
 					},
 				},
@@ -1735,7 +1120,7 @@ visible = (\
 	tags = {
 		"ammo",
 	},
-	version = 2,
+	version = 4,
 	visible = {
 		conditions = {
 			rows = {
