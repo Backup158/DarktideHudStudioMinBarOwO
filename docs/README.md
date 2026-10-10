@@ -9,6 +9,8 @@ Just installing this won't change anything; this is just a resource for you to u
 
 ![player hud with most](./assets/images/owo_hud_show_all.png)
 
+![player panel with full load and holding reload](./assets/images/owo_hud_player_panel_ammo_update.png)
+
 Now I will yap about design. Skip to the next headings if you want.
 
 I am a big fan of contextual HUDs with minimal intrusion, and I generally will prioritize immersion over small gameplay benefits. However, there's a tricky balance between having the information you need and having too many things on the screen too often, and this balance can shift depending on experience and rustiness (e.g. Knowing roughly how much stamina drains, but being less precise with this after a long break). Anyways, that balance can be tipped by a lot of information that's good to know, but not all the time. One thing that annoyed me in Space Marine 2 was having the health bar on the screen. If it was always off, knowing when to stimm harder to nail down, but if it was always on, it's annoyingly sitting there, taunting me! The contextual display helped, but that specific case would show it any time you were in combat, even if at full health, and I *really* dislike how large it is.
@@ -37,6 +39,8 @@ By default, all blocks will also appear on demand when you hold the hotkey `T`.
 Elements marked [ODO] only appear when using the hotkey.
 
 ### Player Panel
+![Player Panel and Ammo](./assets/images/owo_hud_player_panel_ammo_update.png)
+
 - Toughness and Toughness text
     - Appears at < 30%
     - Toughness bar is blue, and it turns yellow when over 100% (with a more faded yellow from 100%-110%)
@@ -48,8 +52,9 @@ Elements marked [ODO] only appear when using the hotkey.
     - Appears at < 30%
 - Ability charge progress
     - Appears when you have no ability ready and the charge is at > 80% progress
+    - The vertical green bar
 - Peril
-    - Bar that fades in with intensity
+    - Bar that fades in with intensity (below Stamina)
     - It goes from faded out pink to hot pink
     - Not in the pictures because it's fully transparent at 0%, but it's below the stamina bar
 - Stimm
@@ -69,8 +74,6 @@ Elements marked [ODO] only appear when using the hotkey.
         - I hard-coded these thresholds based on the normal conditions of Ammo crates having 4 uses of 100% reserve restore. 
         - Havoc players can suffer because isn't that what you want???
         - lol just kidding, you can open the code and edit those thresholds if you'd rather have it earlier/later.
-
-![player panel ammo psyker](./assets/images/owo_hud_player_ammo_psyker.png)
 
 ### Player Panel Icons and Progress
 Alternative version of player panel with no text, focusing on cooldown availability. These can appear on demand, but note that some of them will still be hidden when the value is high enough (such as Stamina >= 50% still being hidden).
@@ -196,6 +199,8 @@ Peril from here and in the Player Panel bar:
 ### Ally Panel Icons
 Appears if alive and not a bot
 
+![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
+
 - Player Status Needs Help
     - Net, dog, etc.
     - Just a generic exclamation point icon. Disabled by default. I recommend using the blocks from [Player State Indicators](https://www.nexusmods.com/warhammer40kdarktide/mods/635) instead
@@ -252,4 +257,19 @@ Appears if alive and not a bot
         - Uses colors from RecolorStimms if you have that installed
         - To use vanilla colors, duplicate the block --> go to this node --> Rectangle Style --> Color --> Change "Code" to "Data Source"
 
-![ally panel](./assets/images/owo_hud_ally_panel_icons.png)
+![ally panel with health icon](./assets/images/owo_hud_ally_panel_context.png)
+
+*Ally with low health.*
+
+![Ally Panel with a broken shield icon](./assets/images/owo_hud_ally_panel_toughness.png)
+
+*Ally with broken toughness.*
+
+![Ally Panel with a health icon, crossed out by swords](./assets/images/owo_hud_ally_panel_wound.png)
+
+*Ally on their last wound, and ally downed.*
+
+![Ally Panel shown for the whole team](./assets/images/owo_hud_ally_panel_show.png)
+
+# Other Pictures
+![recolorstimms](./assets/images/owo_hud_recolorstimms.png)
