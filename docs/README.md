@@ -221,6 +221,8 @@ Appears if alive and not a bot
         - The health threshold is around when Poxbursters and Snipers lethal in normal matches
         - When downed, icon appears but at low opacity
     - Color-coded like the player panel
+- Last Wound
+    - Appears on top of the Health Icon when player is on their last wound
 - [ODO] Health Details
     - Health bar with wound segments
     - Corruption overlay
