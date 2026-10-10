@@ -4,6 +4,7 @@
     - [ODO] Account name is now available without State Your Name
     - Names use player slot color
     - Stimm color uses values from RecolorStimms if installed
+    - Last Wound indicator over health icon
 - Player Panel
     - Added missing corruption bar...
     - Stim and Pocketable are enabled now
@@ -30,13 +31,16 @@
 - Ally Panel
     - Default status icon is an exclamation point instead of helping
     - Name appears with health and toughness
+    - Health < 100 only appears if corruption > 50%
     - Stimm now fades out quickly instead of disappearing immediately
     - Blitz icon is yellow until it's empty, where it's red (but not the deep red)
+    - Toughness broken now longers for 0.5s
 ## Fix
 - Ally check being interfered with when changing player source
     - It was originally checking player 1, 2, 3, 4
     - When importing as new player source, it would change 2 to 3 (or whatever), so that check would end up being 1, 3, 3, 4
     - Now it does the same check but written differently so it doesn't get replaced
+- Player panels only appear in Mission/Training
 
 # 1.2.2 - 2026-10-08
 ## Changed

@@ -14,7 +14,7 @@ return {
 	label = "OwO Ally Icons",
 	library_label = "OwO Ally Icons",
 	localizations = {},
-	member_id = "owo_ally_icons",
+	member_id = "owo_ally_icons_2",
 	mod_version = 4,
 	name = "owo_ally_icons",
 	nodes = {
@@ -572,7 +572,7 @@ visible = false",
 						kind = "thresholds",
 						thresholds = {
 							current = {
-								field = "blitz.count",
+								field = "blitz.count_percent",
 								kind = "source",
 								source = "player_2",
 								value = 0,
@@ -599,21 +599,28 @@ visible = false",
 								{
 									color = {
 										255,
+										214,
+										214,
+										73,
+									},
+									pct = 25,
+								},
+								{
+									color = {
+										255,
 										248,
 										255,
 										15,
 									},
-									pct = 2,
+									pct = 100,
 								},
 							},
 							max = {
-								field = "blitz.max_count",
-								kind = "source",
-								source = "player_2",
+								kind = "fixed",
 								value = 100,
 							},
 							payload = "color",
-							scale = "number",
+							scale = "percent",
 						},
 					},
 					material = {
@@ -1109,7 +1116,7 @@ end\
 				},
 				transition = {
 					fade_out = 0.20000000000000001,
-					linger = 0.10000000000000001,
+					linger = 0.5,
 				},
 			},
 			type = "rect",
@@ -1353,7 +1360,7 @@ end\
 								field = "status.health_percent",
 								kind = "source",
 								source = "player_2",
-								value = 0,
+								value = false,
 							},
 							list = {
 								{
@@ -1481,19 +1488,6 @@ end\
 									},
 								},
 								{
-									join = "and",
-									lhs = {
-										field = "status.corruption_percent",
-										kind = "source",
-										source = "player_2",
-									},
-									op = ">=",
-									rhs = {
-										kind = "fixed",
-										value = 50,
-									},
-								},
-								{
 									join = "or",
 									lhs = {
 										field = "status.wounds",
@@ -1537,6 +1531,58 @@ end\
 			type = "rect",
 			values = {
 				material = "content/ui/materials/hud/interactions/icons/pocketable_medkit",
+			},
+		},
+		{
+			callbacks = {
+				value = {
+					visible = {
+						conditions = {
+							rows = {
+								{
+									join = "or",
+									lhs = {
+										field = "status.wounds",
+										kind = "source",
+										source = "player_2",
+									},
+									op = "==",
+									rhs = {
+										kind = "fixed",
+										value = 1,
+									},
+								},
+							},
+						},
+						kind = "conditions",
+					},
+				},
+			},
+			id = "last_wound",
+			label = "Last Wound",
+			offset = {
+				-1582,
+				263,
+			},
+			style = {
+				color = {
+					255,
+					137,
+					56,
+					199,
+				},
+				size = {
+					35,
+					35,
+				},
+				transition = {
+					fade_out = 0.20000000000000001,
+				},
+			},
+			type = "rect",
+			values = {
+				material = "content/ui/materials/icons/presets/preset_01",
+				uv = "flip_none",
 			},
 		},
 		{
@@ -1619,19 +1665,6 @@ end\
 									rhs = {
 										kind = "fixed",
 										value = 100,
-									},
-								},
-								{
-									join = "and",
-									lhs = {
-										field = "status.corruption_percent",
-										kind = "source",
-										source = "player_2",
-									},
-									op = ">=",
-									rhs = {
-										kind = "fixed",
-										value = 50,
 									},
 								},
 								{
