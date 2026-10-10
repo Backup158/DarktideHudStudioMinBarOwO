@@ -785,7 +785,7 @@ end\
 						kind = "thresholds",
 						thresholds = {
 							current = {
-								field = "equipment.ammo_rounds_remaining_percent",
+								field = "equipment.ammo_reserve_percent",
 								kind = "source",
 								source = "player_2",
 								value = 0,
@@ -1587,6 +1587,19 @@ end\
 									op = "changed",
 								},
 								{
+									join = "and",
+									lhs = {
+										field = "status.corruption_percent",
+										kind = "source",
+										source = "player_2",
+									},
+									op = ">=",
+									rhs = {
+										kind = "fixed",
+										value = 50,
+									},
+								},
+								{
 									join = "or",
 									lhs = {
 										field = "state.requires_help",
@@ -1606,6 +1619,19 @@ end\
 									rhs = {
 										kind = "fixed",
 										value = 100,
+									},
+								},
+								{
+									join = "and",
+									lhs = {
+										field = "status.corruption_percent",
+										kind = "source",
+										source = "player_2",
+									},
+									op = ">=",
+									rhs = {
+										kind = "fixed",
+										value = 50,
 									},
 								},
 								{
@@ -1674,7 +1700,7 @@ end\
 				},
 				shadow = true,
 				size = {
-					205,
+					500,
 					25,
 				},
 			},
@@ -1719,11 +1745,11 @@ end\
 			id = "player_account_name_detail",
 			label = "Player Account Name Detail",
 			offset = {
-				-1585,
+				-1540,
 				225,
 			},
 			style = {
-				align = "top_center",
+				align = "top_left",
 				color = {
 					255,
 					225,
@@ -1733,7 +1759,7 @@ end\
 				font_size = 16,
 				shadow = true,
 				size = {
-					205,
+					500,
 					15,
 				},
 			},
